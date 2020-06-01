@@ -1,0 +1,18 @@
+  [1m[35m (1141.5ms)[0m  [1m[35mCREATE DATABASE "stack_overflow_clone_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (585.0ms)[0m  [1m[35mCREATE DATABASE "stack_overflow_clone_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-06-01 18:26:24 -0400
+Started GET "/" for ::1 at 2020-06-01 18:26:24 -0400
+Started GET "/" for ::1 at 2020-06-01 18:35:37 -0400
+
+ActionController::RoutingError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/1f9d05a581a4530d/variables" for ::1 at 2020-06-01 18:35:38 -0400
+Started GET "/" for ::1 at 2020-06-01 18:38:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (2.1ms)
+Completed 200 OK in 1615ms (Views: 1605.0ms | ActiveRecord: 0.0ms)
+
+
