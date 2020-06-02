@@ -11,16 +11,20 @@ import {
 import GreetingContainer from "./greeting/greeting_container";
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
-
+import { AuthRoute } from '../util/route_util';
 const App = () => (
     <div>
         <header>
-            <h1>Code Overflow from App</h1>
+            <Link to="/" className="header-link">
+                <h1>Code Overflow from app</h1>
+            </Link>
             <GreetingContainer />
         </header>
-
-        <Route path="/login" component={LoginFormContainer} />
-        <Route path="/signup" component={SignupFormContainer} />
+        <Switch>
+            <AuthRoute exact path="/" component={splash_page} />
+            <AuthRoute exact path="/login" component={LoginFormContainer} />
+            <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        </Switch>
     </div>
 );
 
