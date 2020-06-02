@@ -12,9 +12,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Congrats from './congrats';
+import Test from './test_home_page';
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
-    ReactDOM.render(<Congrats />, root);
+    ReactDOM.render(<Test />, root);
 });
