@@ -11,19 +11,24 @@ import {
 import GreetingContainer from "./greeting/greeting_container";
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
+import Splash from './splash/splash_page';
+
 import { AuthRoute } from '../util/route_util';
+
 const App = () => (
-    <div>
-        <header>
-            <Link to="/" className="header-link">
+    <div className="app">
+        {/* bem, base element modifier */}
+        <nav className="nav"> 
+            <Link to="/" className="nav__link--home">
                 <h1>Code Overflow from app</h1>
             </Link>
-            <GreetingContainer />
-        </header>
+            <GreetingContainer className="nav__container--buttons"/>
+        </nav>
         <Switch>
-            <AuthRoute exact path="/" component={splash_page} />
+            <AuthRoute exact path="/" component={Splash} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
+            {/* <AuthRoute exact path="/main" component={MainContainer} /> */} 
         </Switch>
     </div>
 );

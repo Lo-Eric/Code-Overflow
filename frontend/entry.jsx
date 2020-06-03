@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //for testing
     // window.getState = store.getState;
-    // window.dispatch = store.dispatch;
+    // window.dispatch = stor;e.dispatch;
     window.login = SessionAPIUtil.login;
     window.signup = SessionAPIUtil.signup;
     window.logout = SessionAPIUtil.logout;
