@@ -3,11 +3,30 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 50px;
-    background-color: yellow;
+    height: 45px;
+    border-top: 3px solid orange;
+    border-bottom: 1px solid #e0e0e0;
+    align-items: center;
+    background-color: white;
     display: flex;
     justify-content: space-between;
+    box-sizing: border-box;
     // border: 1px solid black;
+    // position: fixed;
+    // top: 0 !important;
+    // border-top: 3px solid #f48024;
+    // border-bottom: 1px solid #e0e0e0;
+    // align-items: center;
+    // background-color: #fafafb;
+    // top: 0;
+    // left: 0px;
+    // right: 0;
+    // z-index: 1;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-evenly;
+    // padding-bottom: 4px;
+    
 }
 
 .nav__link--home {

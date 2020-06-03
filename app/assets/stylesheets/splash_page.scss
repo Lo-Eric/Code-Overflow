@@ -1,20 +1,37 @@
-.text_box1 {
-    // display: flex;
-    // align-items: center;
-    background-image: image-url('content1.png');
-}
-
 .splash_contents {
     width: 100vw;
     height: 200vh;
 }
 
-.text {
-    width: 10vw;
-    height: 5vh;
-    overflow: scroll;
-    border: 1px solid black;
+.text_box1 {
+    // display: flex;
+    // align-items: center;
+    background-image: image-url('content1.png');
+    background-size: 100vw 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 100vw;
+    height: 500px; 
+    // font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
 }
+
+.text_box1 h1 {
+    font-family: 'Roboto Slab Bold',serif;
+    font-weight: 700;
+    font-size: 30px;
+    padding-top: 200px;
+}
+
+.text_box1 h4{
+    width: 30%;
+    font-size: 20px;
+    padding-left: 35%;
+    margin-top: 10px;
+    // margin-left: 20
+    // overflow: scroll;  
+}
+
 // #image {
 //     position: absolute;
 //     left: 0;
