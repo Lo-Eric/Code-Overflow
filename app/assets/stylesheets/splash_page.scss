@@ -1,0 +1,33 @@
+.text_box1 {
+    // display: flex;
+    // align-items: center;
+    background-image: image-url('content1.png');
+}
+
+.splash_contents {
+    width: 100vw;
+    height: 200vh;
+}
+
+.text {
+    width: 10vw;
+    height: 5vh;
+    overflow: scroll;
+    border: 1px solid black;
+}
+// #image {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+// }
+
+// .text {
+//     z-index: 100;
+//     position: absolute;
+//     color: white;
+//     font-size: 24px;
+//     font-weight: bold;
+//     left: 150px;
+//     top: 350px;
+// }
+

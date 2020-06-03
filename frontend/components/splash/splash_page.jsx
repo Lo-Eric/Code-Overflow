@@ -1,16 +1,20 @@
 import React from "react";
-import HeaderIntroContainer from "./HeaderIntro/HeaderIntroContainer";
 import { Link } from 'react-router-dom';
 
-const splash = () => {
-    <div class="Splash_content">
-        <nav class="nav_bar"></nav>
-
-        <nav class="Content1">
+const Splash = () => {
+    return (
+    <div className="splash_contents">
+        <nav className="nav_bar"></nav>
+        
+        <div className="text_box1"> 
             <h1>We love people who code</h1>
-            <p>We build products that empower developers and connect them to solutions that enable productivity, growth, and discovery.</p>
-        </nav>
+            {/* <img id="image" src="assets/content1.png" alt="broken image" /> */}
+            <div className="text">
+                <h1>We build products that empower developers and connect them to solutions that enable productivity, growth, and discovery.</h1> 
+            </div>    
+        </div>
     </div>
+    )
 };
 
-export default splash;
+export default Splash;
