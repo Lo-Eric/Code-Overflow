@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
             email: '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+
     }
 
     update(field) {
@@ -34,43 +35,74 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        return (
-            <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to Code Overflow!
-            <br />
-            Please {this.props.formType} or {this.props.navLink}
-                    {this.renderErrors()}
-                    <div className="login-form">
-                        <br />
-                        <label>Username:
+        if (this.props.formType === 'Signup') {
+            
+            var SignupForm =
+             <form onSubmit={this.handleSubmit} className="login-form-container">
+             <div className="Signup_Error">{this.renderErrors()}</div>
+             <div className="login-form">
+                <br />
+                <label>Username:
                             <input type="text"
-                                    value={this.state.username}
-                                    onChange={this.update('username')}
-                                    className="login-input"
-                                />
-                        </label>
-                        <br />
-                        <label>Email:
+                        value={this.state.username}
+                        onChange={this.update('username')}
+                        className="login-input"
+                    />
+                </label>
+                <br />
+                <label>Email:
                             <input type="text"
-                                    value={this.state.email}
-                                    onChange={this.update('email')}
-                                    className="login-input"
-                            />
-                        </label>
-                        <br />
-                        <label>Password:
+                        value={this.state.email}
+                        onChange={this.update('email')}
+                        className="login-input"
+                    />
+                </label>
+                <br />
+                <label>Password:
                             <input type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="login-input"
-                            />
-                        </label>
-                        <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} />
-                    </div>
-                </form>
+                        value={this.state.password}
+                        onChange={this.update('password')}
+                        className="login-input"
+                    />
+                </label>
+                <br />
+                <input className="session-submit" type="submit" value={this.props.formType} /> </div> </form>
+        };
+
+        if (this.props.formType === 'Login') {
+            var LoginForm = 
+            <form onSubmit={this.handleSubmit} className="login-form-container">
+            <div className="Signup_Error">{this.renderErrors()}</div>
+            <div className="login-form">
+                <br />
+                <label>Username:
+                    <input type="text"
+                        value={this.state.username}
+                        onChange={this.update('username')}
+                        className="login-input"
+                    />
+                </label>
+                <br />
+                <label>Password:
+                            <input type="password"
+                        value={this.state.password}
+                        onChange={this.update('password')}
+                        className="login-input"
+                    />
+                </label>
+                <br />
+                <input className="session-submit" type="submit" value={this.props.formType} /> </div> </form>
+        };
+
+        return (
+            // <div className="login-form-container">
+            //     <form onSubmit={this.handleSubmit} className="login-form-box">
+            //         Welcome to Code Overflow!
+            <div>
+                    {SignupForm}
+                    {LoginForm}
             </div>
+
         );
     }
 }

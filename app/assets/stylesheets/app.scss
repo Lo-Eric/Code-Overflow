@@ -1,16 +1,19 @@
 .nav {
-    // position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 45px;
+    height: 50px;
     border-top: 3px solid orange;
     border-bottom: 1px solid #e0e0e0;
     align-items: center;
     background-color: white;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
+    padding-bottom: 4px;
+    padding-top: 4px;
     // border: 1px solid black;
     // position: fixed;
     // top: 0 !important;
@@ -31,6 +34,10 @@
 
 .nav__link--home {
     border: 1px solid red;
+}
+
+.nav__link--demo_login {
+    left: 500px;
 }
 
 .app {
