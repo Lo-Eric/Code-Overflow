@@ -2,11 +2,12 @@ class Api::SessionsController < ApplicationController
     skip_before_action :verify_authenticity_token, only: [:create]
 
     def create
+        # debugger
         @user = User.find_by_credentials(
-        params[:user][:username],
+        params[:user][:email],
         params[:user][:password],
         )
-
+        # debugger
         if @user
             login(@user)
             render "api/users/show"

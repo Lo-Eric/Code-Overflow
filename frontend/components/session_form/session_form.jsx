@@ -17,7 +17,9 @@ class SessionForm extends React.Component {
     }
 
     handleSubmit(e) {
+        // debugger
         e.preventDefault();
+        this.props.removeErrors()
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
     }
@@ -75,10 +77,10 @@ class SessionForm extends React.Component {
             <div className="Signup_Error">{this.renderErrors()}</div>
             <div className="login-form">
                 <br />
-                <label>Username:
+                <label>Email:
                     <input type="text"
-                        value={this.state.username}
-                        onChange={this.update('username')}
+                        value={this.state.email}
+                        onChange={this.update('email')}
                         className="login-input"
                     />
                 </label>

@@ -4,7 +4,7 @@ class DemoForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: 'DemoUser',
+            email: 'DemoEmail@gmail.com',
             password: 'Demopw',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,6 +16,7 @@ class DemoForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        this.props.removeErrors();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
     }
@@ -43,10 +44,10 @@ class DemoForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className="login-form-container">
                     <div className="login-form">
                         <br />
-                        <label>Username:
-                    <input type="text"
-                                value={this.state.username}
-                                onChange={this.update('username')}
+                        <label>Email:
+                         <input type="text"
+                                value={this.state.email}
+                                onChange={this.update('email')}
                                 className="login-input"
                             />
                         </label>
