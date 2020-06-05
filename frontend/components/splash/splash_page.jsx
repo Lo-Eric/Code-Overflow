@@ -32,8 +32,12 @@ const Splash = () => {
                     <p>Find the right job through high quality listings and search for roles based on title, technology stack, salary, location, and more.</p>
                     <button className="button3">Find a job</button>
                 </div> 
-                    
             </section>     
+            <section className="content3-1">
+                <h1>For businesses, by developers</h1>
+                <div>bar-pill</div>
+                <p>Our mission is to help developers write the script of the future. This means helping you find and hire skilled developers for your business and providing them the tools they need to share knowledge and work effectively.</p>
+            </section>
     </div>    
     )
 };
