@@ -18,6 +18,7 @@ const Splash = () => {
                     <img src="https://cdn.sstatic.net/Img/home/public-qa.svg?v=d82acaa7df9f" alt=""/>
                     <h1>Public Q &#38; A</h1>
                     <p>Get answers to more than 16.5 million questions and give back by sharing your knowledge with others. Sign up for an account.</p>
+                    <button className="button">Browse questions</button>
                 </div>
                 <div id="box2">Private Q &#38; A</div>
                 <div id="box3">Browse Jobs</div>  

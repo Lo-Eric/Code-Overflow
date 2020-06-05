@@ -42,29 +42,33 @@ class SessionForm extends React.Component {
             var SignupForm =
              <form onSubmit={this.handleSubmit} className="login-form-container">
              <div className="Signup_Error">{this.renderErrors()}</div>
-             <div className="login-form">
+             <div className="signup-form">
                 <br />
+                <div className="form_group">
                 <label>Username:
                             <input type="text"
                         value={this.state.username}
                         onChange={this.update('username')}
-                        className="login-input"
+                        className="signup-input"
                     />
                 </label>
+                </div>
                 <br />
+                <div className="form_group">
                 <label>Email:
                             <input type="text"
                         value={this.state.email}
                         onChange={this.update('email')}
-                        className="login-input"
+                        className="signup-input"
                     />
                 </label>
+                </div>
                 <br />
                 <label>Password:
                             <input type="password"
                         value={this.state.password}
                         onChange={this.update('password')}
-                        className="login-input"
+                        className="signup-input"
                     />
                 </label>
                 <br />
@@ -74,9 +78,10 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'Login') {
             var LoginForm = 
             <form onSubmit={this.handleSubmit} className="login-form-container">
-            <div className="Signup_Error">{this.renderErrors()}</div>
+            <div className="login_error">{this.renderErrors()}</div>
             <div className="login-form">
                 <br />
+                <div className="form_group">
                 <label>Email:
                     <input type="text"
                         value={this.state.email}
@@ -84,7 +89,9 @@ class SessionForm extends React.Component {
                         className="login-input"
                     />
                 </label>
+                </div>
                 <br />
+                <div className="form_group">
                 <label>Password:
                             <input type="password"
                         value={this.state.password}
@@ -92,6 +99,7 @@ class SessionForm extends React.Component {
                         className="login-input"
                     />
                 </label>
+                </div>
                 <br />
                 <input className="session-submit" type="submit" value={this.props.formType} /> </div> </form>
         };
