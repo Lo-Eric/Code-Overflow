@@ -77,20 +77,19 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 90vw !important;
-    border: 1px solid red;
+    width: 73vw !important;
     margin-left: auto;
     margin-right: auto;
 }
 
 .content2-2 #box1 {
-    width: 320px;
-    height: 360px;
-    box-shadow: 0 0 2px 1px rgba(255,255,255,0.4);
+    width: 250px;
+    height: 300px;
+    box-shadow: 0 0 3px 0px rgba(85, 84, 84, 0.404);
     text-align: center;
-    margin-top: 64px;
+    margin-top: 60px;
     padding: 32px !important;
-    border: 1px solid red;
+    border-radius: 7px !important;
 }
 
 .content2-2 #box1 h1 {
@@ -98,4 +97,16 @@
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 80px;
+}
+
+.content2-2 #box1 p {
+    text-align: center !important;
+}
+
+.content2-2 .button {
+    background-color: #2b2d6e !important;
+    color: white;
+    padding: 12px 24px;
+    margin: 20px;
+    border-radius: 3px;
 }

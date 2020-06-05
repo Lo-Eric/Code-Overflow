@@ -8,3 +8,11 @@
     width: inherit;
     margin: 0 auto;
 }
+
+.form-group {
+    padding-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+}
