@@ -21,13 +21,17 @@ const App = () => (
         {/* bem, base element modifier */}
         <nav className="nav"> 
             <Link to="/" className="nav__link--home">
-                <h1>Code Overflow from app</h1>
-            </Link>
+                <img className="nav-logo" src={window.navLogo} alt="nav-logo" />
+                <h1>Code Overflow </h1>
+            </Link> 
+        {/* <div className="app2"> */}
             <Link to="/DemoLogin" className="nav__link--demo_login">
                 <h1>Demo</h1>
             </Link>
             <GreetingContainer className="nav__container--buttons"/>
+        {/* </div> */}
         </nav>
+
         <Switch>
             <AuthRoute exact path="/" component={Splash} />
             <AuthRoute exact path="/DemoLogin" component={DemoFormContainer} />

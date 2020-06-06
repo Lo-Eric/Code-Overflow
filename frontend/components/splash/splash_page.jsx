@@ -5,7 +5,7 @@ const Splash = () => {
     return (
     <div className="splash_contents">
             <section className="content1">
-                <h1>We love people who code</h1>
+                <h1>We &#60; 3 people who code</h1>
                 <h4>We build products that empower developers and connect them to solutions that enable productivity, growth, and discovery.</h4>
             </section>
             <section className="content2-1">
@@ -27,7 +27,7 @@ const Splash = () => {
                     <button className="button2">Try for free</button>
                 </div>
                 <div id="box3">
-                    <img src="https://cdn.sstatic.net/Img/home/private-qa.svg?v=2c1de180b6d7" alt="" />
+                    <img src={window.logo} alt="" />
                     <h1>Browse jobs</h1>
                     <p>Find the right job through high quality listings and search for roles based on title, technology stack, salary, location, and more.</p>
                     <button className="button3">Find a job</button>

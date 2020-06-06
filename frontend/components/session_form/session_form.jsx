@@ -41,22 +41,23 @@ class SessionForm extends React.Component {
             
             var SignupForm =
              <form onSubmit={this.handleSubmit} className="login-form-container">
-             <div className="Signup_Error">{this.renderErrors()}</div>
+             
              <div className="signup-form">
                 <br />
                 <div className="form_group">
                 <label>Username:
-                            <input type="text"
+                    <input type="text"
                         value={this.state.username}
                         onChange={this.update('username')}
                         className="signup-input"
                     />
+                    <div className="signup_error">{this.renderErrors()}</div>
                 </label>
                 </div>
                 <br />
                 <div className="form_group">
                 <label>Email:
-                            <input type="text"
+                    <input type="text"
                         value={this.state.email}
                         onChange={this.update('email')}
                         className="signup-input"
@@ -65,7 +66,7 @@ class SessionForm extends React.Component {
                 </div>
                 <br />
                 <label>Password:
-                            <input type="password"
+                    <input type="password"
                         value={this.state.password}
                         onChange={this.update('password')}
                         className="signup-input"
@@ -78,7 +79,7 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'Login') {
             var LoginForm = 
             <form onSubmit={this.handleSubmit} className="login-form-container">
-            <div className="login_error">{this.renderErrors()}</div>
+            
             <div className="login-form">
                 <br />
                 <div className="form_group">
@@ -88,12 +89,13 @@ class SessionForm extends React.Component {
                         onChange={this.update('email')}
                         className="login-input"
                     />
+                    <div className="login_error">{this.renderErrors()}</div>
                 </label>
                 </div>
                 <br />
                 <div className="form_group">
                 <label>Password:
-                            <input type="password"
+                    <input type="password"
                         value={this.state.password}
                         onChange={this.update('password')}
                         className="login-input"
@@ -105,12 +107,10 @@ class SessionForm extends React.Component {
         };
 
         return (
-            // <div className="login-form-container">
-            //     <form onSubmit={this.handleSubmit} className="login-form-box">
-            //         Welcome to Code Overflow!
-            <div>
-                    {SignupForm}
-                    {LoginForm}
+            <div className="login-background">
+                <img className="logo" src={window.logo} alt="logo-icon"/>
+                {SignupForm}
+                {LoginForm}
             </div>
 
         );
