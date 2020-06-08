@@ -13,9 +13,20 @@
     display: block;
     position: absolute;
     z-index: 1;
+    height: 300px;
+    width: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 3px 1px rgba(85, 84, 84, 0.404);
 }
 .dropdown-btn {
-    padding: 0;
+    padding: 10px 10px;
     border: none;
     background: none;
+}
+
+.dropdown-btn:hover {
+    background-color: #eff0f1;
 }

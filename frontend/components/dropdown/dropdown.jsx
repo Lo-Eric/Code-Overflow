@@ -20,10 +20,10 @@ class Dropdown extends React.Component {
             <img src={window.dropdown} alt="dropdown-icon" />
         </button>
         <div className={this.state.dropdownShow ? "dropdown-content-show" : "dropdown-content"} id="myDropdown">
-            <h4>Item1</h4>
-            <h4>Item2</h4>
-            <h4>Item3</h4>
-            <h4>Item4</h4>
+            <h4>Home</h4>
+            <h4>Public</h4>
+            <h4>Find a job</h4>
+            <h4>Teams</h4>
         </div>
     </div>
     )
