@@ -41,14 +41,14 @@ class DemoForm extends React.Component {
     render() {
         if (this.props.formType === 'DemoLogin') {
             var LoginForm =
-                <form onSubmit={this.handleSubmit} className="login-form-container">
-                    <div className="login-form">
+                <form onSubmit={this.handleSubmit} className="demo-form-container">
+                    <div className="demo-form">
                         <br />
                         <label>Email:
                          <input type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
-                                className="login-input"
+                                className="demo-input"
                             />
                         </label>
                         <br />
@@ -56,7 +56,7 @@ class DemoForm extends React.Component {
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
-                                className="login-input"
+                                className="demo-input"
                             />
                         </label>
                         <br />
@@ -67,7 +67,7 @@ class DemoForm extends React.Component {
             // <div className="login-form-container">
             //     <form onSubmit={this.handleSubmit} className="login-form-box">
             //         Welcome to Code Overflow!
-            <div>
+            <div className="demo-background">
                 {this.renderErrors()}
                 {LoginForm}
             </div>

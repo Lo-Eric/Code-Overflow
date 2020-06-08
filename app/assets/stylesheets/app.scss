@@ -40,8 +40,20 @@
 }
 
 .nav__link--home {
-    align-self: flex-start, center;
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    // align-self: flex-start, center;
 }
+
+.nav__link--home .nav-logo {
+    margin-right: 10px;
+}
+
+.nav__link--home h1 {
+    align-self: center;
+}
+
 
 // .nav__link--demo_login {
 //     align-self: left;
