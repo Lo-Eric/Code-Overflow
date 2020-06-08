@@ -11,6 +11,8 @@
 
 .dropdown-content-show {
     display: block;
+    position: absolute;
+    z-index: 1;
 }
 .dropdown-btn {
     padding: 0;

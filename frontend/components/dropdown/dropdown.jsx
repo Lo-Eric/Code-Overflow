@@ -4,6 +4,7 @@ class Dropdown extends React.Component {
     constructor(props) {
         super(props);
         this.state = {dropdownShow: false}
+        this.toggleClass = this.toggleClass.bind(this);
     }
 
     toggleClass() {
