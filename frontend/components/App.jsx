@@ -14,31 +14,38 @@ import LoginFormContainer from './session_form/login_form_container';
 import DemoFormContainer from './session_form/demo_form_container';
 import Splash from './splash/splash_page';
 import Dropdown from './dropdown/dropdown';
+import UserHome from './user_home/user_home'
 
 import { AuthRoute } from '../util/route_util';
+import { ProtectedRoute } from '../util/route_util';
+
 
 const App = () => (
     <div className="app">
         <nav className="nav"> 
+        <div className="nav-left">
             <Dropdown/>
+
             <Link to="/" className="nav__link--home">     
                 <img className="nav-logo" src={window.logo} alt="nav-logo" />
                 <h1>Code Overflow </h1>
             </Link> 
-
+        </div>
+        <div className="nav-right">
             <Link to="/DemoLogin" className="nav__link--demo_login">
                 <h1>Demo</h1>
             </Link>
+          
             <GreetingContainer className="nav__container--buttons"/>
+        </div>
         </nav>
 
         <Switch>
-            <AuthRoute exact path="/" component={Splash} />
+            <Route exact path="/" component={Splash} />
             <AuthRoute exact path="/DemoLogin" component={DemoFormContainer} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
-            {/* <AuthRoute exact path="/home" component={UserHomeContainer} /> */}
-            {/* <AuthRoute exact path="/main" component={MainContainer} /> */} 
+            <ProtectedRoute exact path="/home" component={UserHome} />
         </Switch>
     </div>
 );

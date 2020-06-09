@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import UserHome from '../user_home/user_home';
 
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
         <nav className="login-signup">
             <Link to="/login" className="login-button">Log in</Link>
             <Link to="/signup" className="signup-button">Sign up</Link>
-            {/* <button className="linked-in-nav" onClick={() => window.location.href = "https://www.linkedin.com/"}>LinkedIn</button> */}
         </nav>
     );
     const personalGreeting = () => (

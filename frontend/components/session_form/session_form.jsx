@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -21,7 +22,8 @@ class SessionForm extends React.Component {
         e.preventDefault();
         this.props.removeErrors()
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user)
+        .then(() => <Redirect to='/home'/>);
     }
 
     componentWillUnmount() {
