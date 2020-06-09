@@ -4,7 +4,7 @@ class DemoForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: 'DemoEmail@gmail.com',
+            email: 'DemoEmail@Gmail.com',
             password: 'Demopw',
         };
         this.handleSubmit = this.handleSubmit.bind(this);

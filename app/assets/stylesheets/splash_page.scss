@@ -2,11 +2,13 @@
     padding-top: 30px;
     width: 100vw;
     height: 500vh;
+    // margin-left: -20px;
+    // margin-right: -20px;
 }
 
 .content1 {
     background-image: image-url('content1.png');
-    background-size: 100vw 500px;
+    background-size: 100vw 90;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
@@ -18,17 +20,17 @@
 .content1 h1 {
     font-family: 'Roboto Slab Bold',serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 50px;
     padding-top: 200px;
 }
 
 .content1 h4{
-    width: 30%;
+    width: 27%;
     font-size: 20px;
     padding-left: 35%;
     margin-top: 10px;
-    // margin-left: 20
-    // overflow: scroll;  
+    line-height: 25px;
+    text-align: center;
 }
 
 .content2-1 {
