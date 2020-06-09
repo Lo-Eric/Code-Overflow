@@ -25,10 +25,8 @@
 }
 
 .nav__link--home {
-    // border: 1px solid red;
     display: flex;
     flex-direction: row;
-    // align-self: flex-start, center;
 }
 
 .nav__link--home .nav-logo {
@@ -44,21 +42,28 @@
     flex-direction: row;
     padding-left: 100px;
 }
+
+.dropdown {
+    margin-right: 10px;
+}
+
 .nav-right {
     display: flex;
     flex-direction: row;
-    padding-right: 100px;
+    margin-right: 100px;
+    align-items: center;
 }
 
 
-// .nav__link--demo_login {
-//     align-self: left;
-// }
-
-
-// .app2 {
-//     width: 20%;
-//     margin-left: 500px;
-//     border: 1px solid red;
-//     align-self: baseline;
-// }
+.nav__link--demo_login {
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif; 
+    background-color: #e1ecf4;
+    box-sizing: border-box;
+    color: #39739d;
+    border: 1px solid #7aa7c7;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 13px;
+}

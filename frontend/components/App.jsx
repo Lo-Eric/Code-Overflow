@@ -24,7 +24,7 @@ const App = () => (
     <div className="app">
         <nav className="nav"> 
         <div className="nav-left">
-            <Dropdown/>
+            <Dropdown className="dropdown"/>
 
             <Link to="/" className="nav__link--home">     
                 <img className="nav-logo" src={window.logo} alt="nav-logo" />
