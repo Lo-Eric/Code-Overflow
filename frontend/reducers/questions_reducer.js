@@ -5,7 +5,6 @@ const _nullQuestion = {};
 const questionsReducer = (state = _nullQuestion, action) => {
     switch (action.type) {
         case RECEIVE_QUESTIONS:
-            debugger
             return Object.assign({}, state, action.questions);
         case RECEIVE_QUESTION:
             return Object.assign({}, state, { [action.question.id]: action.question });

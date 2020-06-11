@@ -1,5 +1,4 @@
 export const fetchQuestions = () => {
-    debugger
     return $.ajax ({
         method: "GET",
         url: '/api/questions'
@@ -8,7 +7,7 @@ export const fetchQuestions = () => {
 export const fetchQuestion = (questionId) => {
     return $.ajax ({
         method: "GET",
-        URL: `/api/questions/${questionId}`
+        url: `/api/questions/${questionId}`
     })
 }
 

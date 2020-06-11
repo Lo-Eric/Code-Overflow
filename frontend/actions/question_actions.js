@@ -5,7 +5,6 @@ export const RECEIVE_QUESTION = 'RECEIVE_QUESTION';
 export const REMOVE_QUESTION = 'REMOVE_QUESTION';
 
 export const receiveQuestions = (questions) => {
-    debugger
     return {
         type: RECEIVE_QUESTIONS,
         questions

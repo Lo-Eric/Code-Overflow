@@ -8,7 +8,6 @@ class Dropdown extends React.Component {
     }
 
     toggleClass() {
-        debugger
         const currentState = this.state.dropdownShow;
         this.setState({dropdownShow: !currentState});
     } 
