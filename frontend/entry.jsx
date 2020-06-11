@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.login = SessionAPIUtil.login;
     window.signup = SessionAPIUtil.signup;
     window.logout = SessionAPIUtil.logout;
+    
     //for testing
 
     let store;
@@ -39,10 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
             session: { id: window.currentUser.id }
         };
         store = configureStore(preloadedState);
+        
         delete window.currentUser;
     } else {
         store = configureStore();
     }
+    window.getState = store.getState;
     ReactDOM.render(<Root store={store}/>, root);
 });
 

@@ -18,7 +18,7 @@ import Splash from './splash/splash_page';
 import Dropdown from './dropdown/dropdown';
 import UserHome from './user_home/user_home';
 import QuestionsIndex from './questions/questions_index';
-
+import Footer from './splash/footer';
 
 import { AuthRoute } from '../util/route_util';
 import { ProtectedRoute } from '../util/route_util';
@@ -45,15 +45,18 @@ const App = () => (
         </nav>
 
         <Switch>
+            <Route exact path="/questions/:questionId" component={QuestionShowContainer} />
             <AuthRoute exact path="/" component={Splash} />
             <AuthRoute exact path="/DemoLogin" component={DemoFormContainer} />]
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <ProtectedRoute exact path="/home" component={QuestionsIndexContainer} />
-            <Route exact path="/questions/:questionId" component={QuestionShowContainer}/>
-            
             {/* <ProtectedRoute exact path="/questions/:questionId" component={QuestionsIndexContainer}/> */}
         </Switch>
+
+        <nav className="footer">
+            <Footer />
+        </nav>
     </div>
 );
 

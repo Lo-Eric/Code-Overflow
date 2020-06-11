@@ -1,0 +1,21 @@
+.footer-content {
+    list-style-type: none;
+    text-decoration: none;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: #242729;
+    color: #6a737c;
+    padding-top: 10px;
+}
+
+.footer-content #column-header {
+    padding-right: 50px;
+    line-height: 20px;
+}
+
+.footer-content li {
+    font-size: 13px;
+}
