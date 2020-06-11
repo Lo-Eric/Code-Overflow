@@ -23,7 +23,7 @@ class SessionForm extends React.Component {
         this.props.removeErrors()
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
-        .then(() => <Redirect to='/home'/>);
+        // .then(() => <Redirect to='/home'/>);
     }
 
     componentWillUnmount() {

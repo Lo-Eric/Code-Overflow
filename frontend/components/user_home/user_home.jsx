@@ -6,7 +6,6 @@ class UserHome extends React.Component {
     }
 
     render() {
-        debugger
         return(
             <div className="body">
             <h2>Log in</h2>
