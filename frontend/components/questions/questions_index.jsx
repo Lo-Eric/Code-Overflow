@@ -30,7 +30,7 @@ class QuestionsIndex extends React.Component {
                         </div>    
                 </section>
 
-                <section className="right-nav-bar">Watched Taged</section>
+                <section className="right-nav-bar">Watched Tags</section>
             
             </div>
         )

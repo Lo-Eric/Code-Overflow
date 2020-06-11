@@ -6,8 +6,10 @@ class DemoForm extends React.Component {
         this.state = {
             email: 'DemoEmail@Gmail.com',
             password: 'Demopw',
+            dropdownShow: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.toggleClass = this.toggleClass.bind(this);
     }
 
     update(field) {
@@ -20,6 +22,11 @@ class DemoForm extends React.Component {
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
     }
+
+    toggleClass() {
+        const currentState = this.state.dropdownShow;
+        this.setState({ dropdownShow: !currentState });
+    } 
 
     renderErrors() {
         return (
@@ -42,7 +49,8 @@ class DemoForm extends React.Component {
         if (this.props.formType === 'DemoLogin') {
             var LoginForm =
                 <form onSubmit={this.handleSubmit} className="demo-form-container">
-                    <div className="demo-form">
+                    <div className={this.state.dropdownShow ? "dropdown-content-show" : "demo-form"}>
+                    {/* <div className="demo-form"> */}
                         <br />
                         <label>Email:
                          <input type="text"
