@@ -76,6 +76,7 @@ class DemoForm extends React.Component {
             //     <form onSubmit={this.handleSubmit} className="login-form-box">
             //         Welcome to Code Overflow!
             <div className="demo-background">
+                <img className="logo" src={window.logo} alt="logo-icon" />
                 {this.renderErrors()}
                 {LoginForm}
             </div>
