@@ -28,7 +28,7 @@ const Splash = () => {
                     <button className="button2">Try for free</button>
                 </div>
                 <div id="box3">
-                    <img src={window.logo} alt="" />
+                    <img src="https://cdn.sstatic.net/Img/home/jobs.svg?v=931d6c0863ee" alt="" />
                     <h1>Browse jobs</h1>
                     <p>Find the right job through high quality listings and search for roles based on title, technology stack, salary, location, and more.</p>
                     <button className="button3">Find a job</button>
