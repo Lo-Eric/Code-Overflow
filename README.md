@@ -3,7 +3,7 @@
 [Code Overflow](https://code-overflow.herokuapp.com/#/) is an online community where anyone can share coding ideas and receive feedback or inspiration from others all over the globe. 
 
 ### Usage
-[Login, signup, or demo login](./app/images/login:signup.png)
+[Login, signup, or demo login](/images/box3.png)
 
 ### Technologies Used
 
