@@ -19,16 +19,21 @@
     color: #0c0d0e;
  }
 
-.question-content {
+.question-header {
     display: flex;
     flex-direction: column;
     margin-top: 80px;
 }
 
-.question-content h1 {
+.question-header h1 {
     padding-bottom: 70px;
     padding-left: 30px;
     /* border-bottom: 1px solid #e0e0e0; */
     font-size: 1.8rem;
     font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+.question-content {
+    display: flex;
+    flex-direction: column;
 }

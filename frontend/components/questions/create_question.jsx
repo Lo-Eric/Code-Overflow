@@ -27,17 +27,17 @@ class CreateQuestionForm extends React.Component {
             <div className="create-question-form">
                 <section className="left-nav-bar"><LeftNavBar/></section>
 
-                <section className="question-content">
+                <section className="question-header">
                     <h1>Ask a Public Question</h1>
-                    <div>
-                        <label>Title
+                    <div className="question-content">
+                        <label>Title:
                             <input type="text"
                                     value={this.state.title}
                                     onChange={this.update('title')}
                                     className="title-input"
                                 />
                         </label>
-                        <label>Body
+                        <label>Body:
                             <input type="text"
                                     value={this.state.body}
                                     onChange={this.update('body')}
