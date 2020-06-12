@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { fetchQuestions } from '../../actions/question_actions';
+import { createQuestion } from '../../actions/question_actions';
 import QuestionsIndex from './questions_index';
 import CreateQuestionForm from './create_question';
 

@@ -3,6 +3,7 @@ import { RECEIVE_QUESTIONS, RECEIVE_QUESTION, REMOVE_QUESTION } from '../actions
 const _nullQuestion = {};
 
 const questionsReducer = (state = _nullQuestion, action) => {
+    // debugger
     switch (action.type) {
         case RECEIVE_QUESTIONS:
             return Object.assign({}, state, action.questions);

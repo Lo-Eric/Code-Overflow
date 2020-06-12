@@ -18,7 +18,11 @@ class QuestionsIndex extends React.Component {
                 <section className="left-nav-bar"><LeftNavBar /></section>
 
                 <section className="questions-header">
-                        <h2>Top Questions</h2>
+                        <div className="top-section">
+                            <h2>Top Questions</h2>
+                            <Link to='/question/new' id="ask-question-button">Ask Question</Link>
+                        </div>
+
                         <div className="divider">.</div>
 
                         <div className="questions-index">
