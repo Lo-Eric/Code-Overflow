@@ -51,7 +51,7 @@
 
 }
 
-.question-content {
-    z-index: -1;
+.question-content-2 {
+    z-index: -1 !important;
 }
 

@@ -20,7 +20,7 @@ class QuestionShowForm extends React.Component {
             <div className='question-show-page'>
                 <section className="left-nav-bar"><LeftNavBar /></section>
 
-                <section className="question-content">
+                <section className="question-content-2">
                     <div className="question-title">{this.props.question.title}</div>
                     <div className="divider">.</div>
                     <div className="question-body">{this.props.question.body}</div>
