@@ -34,7 +34,7 @@ const App = () => (
 
             <Link to="/" className="nav__link--home">     
                 <img className="nav-logo" src={window.logo} alt="nav-logo" />
-                    <h1>Code Overflow </h1>
+                    <h1>Code {<span style={{fontWeight: "bold"}}>Overflow</span>}</h1>
             </Link> 
         </div>
         <div className="nav-right">
