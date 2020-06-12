@@ -34,7 +34,9 @@ class QuestionsIndex extends React.Component {
                         </div>    
                 </section>
 
-                <section className="right-nav-bar">Watched Tags</section>
+                <section className="right-nav-bar">
+                    <div className="right-nav-header">Watched Tags</div>
+                </section>
             
             </div>
         )

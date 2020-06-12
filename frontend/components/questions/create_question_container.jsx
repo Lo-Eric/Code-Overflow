@@ -10,9 +10,11 @@ const mapStateToProps = state => ({
     }
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => {
+    return {
     createQuestion: (question) => dispatch(createQuestion(question))
-});
+    }
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateQuestionForm);
 

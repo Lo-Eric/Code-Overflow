@@ -6,10 +6,7 @@ import LeftNavBar from '../left_nav_bar/left_nav'
 class CreateQuestionForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            title: '',
-            body: ''
-        }
+        this.state = this.props.question
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -47,7 +44,7 @@ class CreateQuestionForm extends React.Component {
                                     className="body-input"
                                 />
                         </label>
-                            <input className="question-submit" type="submit" value="submit" /> 
+                         <input className="question-submit" type="submit" value="submit" /> 
                     </div>
                 </section>
             </div>
