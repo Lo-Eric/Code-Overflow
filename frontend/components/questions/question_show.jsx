@@ -21,8 +21,13 @@ class QuestionShowForm extends React.Component {
                 <section className="left-nav-bar"><LeftNavBar /></section>
 
                 <section className="question-content">
-                <div className="question-title">{this.props.question.title}</div>
-                <div className="question-body">{this.props.question.body}</div>
+                    <div className="question-title">{this.props.question.title}</div>
+                    <div className="divider">.</div>
+                    <div className="question-body">{this.props.question.body}</div>
+                </section>
+
+                <section className="right-nav-bar">
+                    <div className="right-nav-header">Watched Tags</div>
                 </section>
             </div>
         )

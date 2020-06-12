@@ -21,7 +21,7 @@
 }
 
 .question-title {
-    /* margin-top: 80px; */
+    margin-top: 80px;
     padding-bottom: 70px;
     padding-left: 30px;
     /* border-bottom: 1px solid #e0e0e0; */
@@ -32,4 +32,20 @@
 .question-body {
     margin-left: 50px;
     font: 17px;
+}
+
+.divider {
+    width: 50vw;
+    font-size: 0px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.question-body {
+    margin-top: 20px;
+}
+
+.right-nav-header {
+    background: #eff0f1;
+    height: 20px;
+    padding: 10px 20px;
 }
