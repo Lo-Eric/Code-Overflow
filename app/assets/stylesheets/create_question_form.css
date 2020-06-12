@@ -47,6 +47,7 @@
     width: 60vw;
     height: 30vw;
     padding: 15px 14px;
+    z-index: 1 !important;
 }
 
 
@@ -68,10 +69,11 @@
 .right-nav-bar {
     position: absolute;
     left: 1000px !important;
-    top: 128px;
+    top: 260px;
     box-shadow: 0 0 3px 1px rgba(85, 84, 84, 0.404);
     background-color: white;
     font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    z-index: 1 !important;
 }
 
 .right-nav-header {

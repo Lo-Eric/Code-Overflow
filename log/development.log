@@ -26372,3 +26372,223 @@ Processing by Api::QuestionsController#index as JSON
 Completed 200 OK in 168ms (Views: 156.2ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/api/questions/1" for ::1 at 2020-06-12 13:38:49 -0400
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (26.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  Rendered api/questions/show.json.jbuilder (11.0ms)
+Completed 200 OK in 162ms (Views: 93.4ms | ActiveRecord: 26.5ms)
+
+
+Started GET "/api/questions" for ::1 at 2020-06-12 13:38:56 -0400
+Processing by Api::QuestionsController#index as JSON
+  Rendering api/questions/index.json.jbuilder
+  [1m[36mQuestion Load (10.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/api/questions/index.json.jbuilder:1
+  Rendered api/questions/index.json.jbuilder (61.4ms)
+Completed 200 OK in 123ms (Views: 106.4ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/api/questions" for ::1 at 2020-06-12 13:39:05 -0400
+Processing by Api::QuestionsController#index as JSON
+  Rendering api/questions/index.json.jbuilder
+  [1m[36mQuestion Load (1.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/api/questions/index.json.jbuilder:1
+  Rendered api/questions/index.json.jbuilder (47.6ms)
+Completed 200 OK in 101ms (Views: 93.9ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-06-12 13:39:23 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (29.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "30P3C8S4ptUFv0jb4sfy5A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (20.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (9.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "DemoUser"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (9.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "DxMbSH8oAgg9CbCKY11kbA"], ["updated_at", "2020-06-12 17:39:23.830899"], ["id", 37]]
+  ↳ app/models/user.rb:30
+  [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (5.9ms)
+  Rendered api/users/show.json.jbuilder (30.9ms)
+Completed 200 OK in 352ms (Views: 82.9ms | ActiveRecord: 89.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-06-12 13:39:29 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"DemoEmail@Gmail.com", "password"=>"[FILTERED]", "dropdownShow"=>"false"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "DemoEmail@Gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:14
+  [1m[35m (26.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:30
+  [1m[36mUser Exists (10.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "DemoUser"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[36mUser Update (23.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "3I-f23sX0_DM021BrCpv_Q"], ["updated_at", "2020-06-12 17:39:29.985556"], ["id", 37]]
+  ↳ app/models/user.rb:30
+  [1m[35m (27.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:30
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (3.4ms)
+  Rendered api/users/show.json.jbuilder (27.0ms)
+Completed 200 OK in 542ms (Views: 63.5ms | ActiveRecord: 89.5ms)
+
+
+Started GET "/api/questions" for ::1 at 2020-06-12 13:39:30 -0400
+Processing by Api::QuestionsController#index as JSON
+  Rendering api/questions/index.json.jbuilder
+  [1m[36mQuestion Load (1.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/api/questions/index.json.jbuilder:1
+  Rendered api/questions/index.json.jbuilder (54.8ms)
+Completed 200 OK in 117ms (Views: 108.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/questions/1" for ::1 at 2020-06-12 13:39:32 -0400
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (13.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  Rendered api/questions/show.json.jbuilder (6.0ms)
+Completed 200 OK in 87ms (Views: 52.1ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/api/questions" for ::1 at 2020-06-12 13:39:33 -0400
+Processing by Api::QuestionsController#index as JSON
+  Rendering api/questions/index.json.jbuilder
+  [1m[36mQuestion Load (2.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/api/questions/index.json.jbuilder:1
+  Rendered api/questions/index.json.jbuilder (55.4ms)
+Completed 200 OK in 106ms (Views: 87.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-12 13:40:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3I-f23sX0_DM021BrCpv_Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (6.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 1377ms (Views: 1361.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-12 13:43:14 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (21.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3I-f23sX0_DM021BrCpv_Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (6.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (97.5ms)
+Completed 200 OK in 2713ms (Views: 2649.9ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/api/questions" for ::1 at 2020-06-12 13:43:20 -0400
+Processing by Api::QuestionsController#index as JSON
+  Rendering api/questions/index.json.jbuilder
+  [1m[36mQuestion Load (8.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/api/questions/index.json.jbuilder:1
+  Rendered api/questions/index.json.jbuilder (65.5ms)
+Completed 200 OK in 122ms (Views: 104.4ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/api/questions" for ::1 at 2020-06-12 13:43:23 -0400
+Processing by Api::QuestionsController#index as JSON
+  Rendering api/questions/index.json.jbuilder
+  [1m[36mQuestion Load (13.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/api/questions/index.json.jbuilder:1
+  Rendered api/questions/index.json.jbuilder (67.2ms)
+Completed 200 OK in 114ms (Views: 95.2ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/api/questions/1" for ::1 at 2020-06-12 13:43:24 -0400
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (6.0ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  Rendered api/questions/show.json.jbuilder (6.5ms)
+Completed 200 OK in 92ms (Views: 48.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/api/questions" for ::1 at 2020-06-12 13:43:26 -0400
+Processing by Api::QuestionsController#index as JSON
+  Rendering api/questions/index.json.jbuilder
+  [1m[36mQuestion Load (14.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/api/questions/index.json.jbuilder:1
+  Rendered api/questions/index.json.jbuilder (83.7ms)
+Completed 200 OK in 154ms (Views: 132.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-12 13:43:49 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3I-f23sX0_DM021BrCpv_Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (5.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (79.6ms)
+Completed 200 OK in 2416ms (Views: 2391.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-12 13:44:02 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (31.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3I-f23sX0_DM021BrCpv_Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (9.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (145.3ms)
+Completed 200 OK in 4013ms (Views: 3942.5ms | ActiveRecord: 31.8ms)
+
+
+Started GET "/" for ::1 at 2020-06-12 13:44:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3I-f23sX0_DM021BrCpv_Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (5.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (76.9ms)
+Completed 200 OK in 1835ms (Views: 1808.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2020-06-12 13:44:26 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3I-f23sX0_DM021BrCpv_Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (13.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (72.9ms)
+Completed 200 OK in 2276ms (Views: 2257.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2020-06-12 13:44:33 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3I-f23sX0_DM021BrCpv_Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (35.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (311.5ms)
+Completed 200 OK in 3765ms (Views: 3720.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2020-06-12 13:44:42 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3I-f23sX0_DM021BrCpv_Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (5.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (70.9ms)
+Completed 200 OK in 2216ms (Views: 2190.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2020-06-12 13:44:50 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3I-f23sX0_DM021BrCpv_Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (6.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (70.2ms)
+Completed 200 OK in 2313ms (Views: 2286.3ms | ActiveRecord: 1.7ms)
+
+
