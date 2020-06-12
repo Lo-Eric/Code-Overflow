@@ -4,14 +4,18 @@
 
 ### Usage
 [Login, signup, or demo login](/images/box3.png)
+[Ask a question]
+[Answer a question]
+[Comment on a question]
 
 ### Technologies Used
 
 Ruby 2.5.1p57 
+
 Rails 5.2.4.3
 
 React 16.13.1
-Redux 4.0.5
 
+Redux 4.0.5
 
 PostgreSQL 12.3 with PostGIS 3.0.1
