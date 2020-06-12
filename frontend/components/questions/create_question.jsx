@@ -24,8 +24,8 @@ class CreateQuestionForm extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit} className="create-question-form-container">
-            <div className="create-question-form">
-                <section className="left-nav-bar"><LeftNavBar/></section>
+            {/* <div className="create-question-form"> */}
+                {/* <section className="left-nav-bar"><LeftNavBar/></section> */}
 
                 <section className="question-header">
                     <h1>Ask a Public Question</h1>
@@ -34,20 +34,24 @@ class CreateQuestionForm extends React.Component {
                             <input type="text"
                                     value={this.state.title}
                                     onChange={this.update('title')}
-                                    className="title-input"
+                                    className="question-input"
                                 />
                         </label>
                         <label>Body:
                             <input type="text"
                                     value={this.state.body}
                                     onChange={this.update('body')}
-                                    className="body-input"
+                                    className="question-input"
                                 />
                         </label>
                          <input className="question-submit" type="submit" value="submit" /> 
                     </div>
                 </section>
-            </div>
+
+                <section className="right-nav-bar">
+                    <div className="right-nav-header">Step 1: Draft your question</div>
+                </section>
+            {/* </div> */}
             </form>
         )
     }
