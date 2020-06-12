@@ -8,10 +8,16 @@ class CreateQuestionForm extends React.Component {
         super(props);
     }
 
+
     render() {
         return (
             <div className="create-question-form">
                 <section className="left-nav-bar"><LeftNavBar/></section>
+
+                <section className="question-content">
+                    <div>Title</div>
+                    <div>Body</div>
+                </section>
             </div>
         )
     }

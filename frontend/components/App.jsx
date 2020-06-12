@@ -14,6 +14,8 @@ import LoginFormContainer from './session_form/login_form_container';
 import DemoFormContainer from './session_form/demo_form_container';
 import QuestionsIndexContainer from './questions/questions_index_container';
 import QuestionShowContainer from './questions/question_show_container';
+import CreateQuestionContainer from './questions/create_question_container';
+
 import Splash from './splash/splash_page';
 import Dropdown from './dropdown/dropdown';
 import UserHome from './user_home/user_home';
@@ -51,6 +53,7 @@ const App = () => (
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <ProtectedRoute exact path="/home" component={QuestionsIndexContainer} />
+            <ProtectedRoute exact path="/questions/new" component={CreateQuestionContainer} />
             {/* <ProtectedRoute exact path="/questions/:questionId" component={QuestionsIndexContainer}/> */}
         </Switch>
 

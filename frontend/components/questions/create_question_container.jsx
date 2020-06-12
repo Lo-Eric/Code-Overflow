@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { fetchQuestions } from '../../actions/question_actions';
 import QuestionsIndex from './questions_index';
+import CreateQuestionForm from './create_question';
 
 const mapStateToProps = state => ({
     question: {
@@ -13,5 +14,5 @@ const mapDispatchToProps = dispatch => ({
     createQuestion: (question) => dispatch(createQuestion(question))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(QuestionsIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateQuestionForm);
 
