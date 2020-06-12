@@ -2,8 +2,8 @@
 # Code Overflow
 [Code Overflow](https://code-overflow.herokuapp.com/#/) is an online community where anyone can share coding ideas and receive feedback or inspiration from others around the globe. 
 
-### Usage
-Login, signup, or demo login  
+## Usage
+**Login, signup, or demo login**  
 Users can signup for a new account, login with an existing account, or demo the site using a pre-made demo user account. Users must be logged in to ask or answer questions, but anyone browsing the site may view existing questions. 
 
 
