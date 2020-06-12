@@ -4,8 +4,16 @@
 
 ### Usage
 [Login, signup, or demo login](/images/box3.png)  
+Users can signup for a new account, login with an existing account, or demo the site using an existing demo user account. 
+
+
 [Ask a question]  
+Users can ask a question by clicking the "Ask question" button and include any tags that they wish to associate with the question.
+
+
 [Answer a question]  
+
+
 [Comment on a question]  
 
 ### Technologies Used
