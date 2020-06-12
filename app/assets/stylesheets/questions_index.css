@@ -77,13 +77,15 @@ a {
 }
 
 .right-nav-bar {
-    margin-top:80px;
+    /* margin-top:20px; */
     width: 270px;
     height: 250px;
     border: 1px solid #e0e0e0;
     box-shadow: 0 0 3px 1px rgba(85, 84, 84, 0.404);
     font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
     margin-left:20px;
+    margin-top: -50px;
+    z-index: -1;
 }
 
 .right-nav-header {

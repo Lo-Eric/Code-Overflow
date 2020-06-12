@@ -48,4 +48,10 @@
     background: #eff0f1;
     height: 20px;
     padding: 10px 20px;
+
 }
+
+.question-content {
+    z-index: -1;
+}
+
