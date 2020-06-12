@@ -19,3 +19,8 @@
 .footer-content li {
     font-size: 13px;
 }
+
+.footer-logo {
+    height: 40px;
+    margin-right: 50px;
+}
