@@ -13,4 +13,5 @@ Rails 5.2.4.3
 React 16.13.1
 Redux 4.0.5
 
+
 PostgreSQL 12.3 with PostGIS 3.0.1
