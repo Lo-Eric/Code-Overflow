@@ -7,6 +7,7 @@ const mapStateToProps = state => ({
     question: {
         title: '',
         body: '',
+        views: 0
     }
 });
 

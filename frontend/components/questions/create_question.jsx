@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from "react-redux";
 import Footer from '../splash/footer'
 import LeftNavBar from '../left_nav_bar/left_nav'
+import { Route, Redirect, withRouter } from 'react-router-dom';
 
 class CreateQuestionForm extends React.Component {
     constructor(props) {
@@ -18,7 +19,9 @@ class CreateQuestionForm extends React.Component {
         e.preventDefault();
         const question = Object.assign({}, this.state);
         this.props.createQuestion(question)
-        .then(()=> <Redirect to='/home'/>);
+            .then(()=> <Redirect to='/home'/>)
+            .then(()=> this.props.history.push('/home'))
+        // .then(()=> console.log("success"));
     }
 
     render() {
@@ -48,8 +51,8 @@ class CreateQuestionForm extends React.Component {
                     </div>
                 </section>
 
-                <section className="right-nav-bar">
-                    <div className="right-nav-header">Step 1: Draft your question</div>
+                <section className="right">
+                    <div className="right_header">Step 1: Draft your question</div>
                 </section>
             {/* </div> */}
             </form>

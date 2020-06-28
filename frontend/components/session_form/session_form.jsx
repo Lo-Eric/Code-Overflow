@@ -19,7 +19,7 @@ class SessionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // this.props.removeErrors()
+        // this.props.removeErrors() 
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
         // .then(() => <Redirect to='/home'/>);
