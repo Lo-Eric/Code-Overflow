@@ -3,7 +3,7 @@ import React from "react";
 class Footer extends React.Component {
   render() {
     return (
-        <div className="footer-content">
+        <section className="footer-content">
           <img className="footer-logo" src={window.logo} height="70" width="40" />
           <ul>
             <li id="column-header">CODE OVERFLOW</li>
@@ -39,6 +39,7 @@ class Footer extends React.Component {
             <li>Science</li>
             <li>Other</li>
           </ul>
+
           <section className="links">
             <div id="social">
               <li>
@@ -59,13 +60,14 @@ class Footer extends React.Component {
                 </a>
               </li>
             </div>
+            
             <div id="copy-rights">
               site design / logo © 2020 Code Overflow Inc; user contributions
               licensed under cc by-sa 4.0 with attribution required. rev
               2020.6.11.35739
             </div>
           </section>
-        </div>
+        </section>
     );
   }
 }
