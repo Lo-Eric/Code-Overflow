@@ -40,17 +40,11 @@ class DemoForm extends React.Component {
         );
     }
 
-    // demoLogin() {
-    //     const demoUser = this.state;
-    //     this.props.processForm(demoUser);
-    // }
-
     render() {
         if (this.props.formType === 'DemoLogin') {
             var LoginForm =
                 <form onSubmit={this.handleSubmit} className="demo-form-container">
                     <div className={this.state.dropdownShow ? "dropdown-content-show" : "demo-form"}>
-                    {/* <div className="demo-form"> */}
                         <br />
                         <label>Email:
                          <input type="text"
@@ -72,9 +66,6 @@ class DemoForm extends React.Component {
         };
 
         return (
-            // <div className="login-form-container">
-            //     <form onSubmit={this.handleSubmit} className="login-form-box">
-            //         Welcome to Code Overflow!
             <div className="demo-background">
                 <img className="logo" src={window.logo} alt="logo-icon" />
                 {this.renderErrors()}
