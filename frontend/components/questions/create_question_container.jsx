@@ -4,11 +4,12 @@ import QuestionsIndex from './questions_index';
 import CreateQuestionForm from './create_question';
 
 const mapStateToProps = state => ({
-    question: {
-        title: '',
-        body: '',
-        views: 0
-    }
+    // question: {
+    //     title: '',
+    //     body: '',
+    //     views: 0
+    // }
+    question: state.entities.questions
 });
 
 const mapDispatchToProps = dispatch => {

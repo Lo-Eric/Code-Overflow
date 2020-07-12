@@ -7,7 +7,11 @@ import { Route, Redirect, withRouter } from 'react-router-dom';
 class CreateQuestionForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.question
+        this.state = {
+            title: '',
+            body: '',
+            views: 0
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -19,16 +23,15 @@ class CreateQuestionForm extends React.Component {
         e.preventDefault();
         const question = Object.assign({}, this.state);
         this.props.createQuestion(question)
-            .then(()=> <Redirect to='/home'/>)
-            .then(()=> this.props.history.push('/home'))
+            // .then(()=> console.log(this.state))
+            // .then(()=> <Redirect to='/home'/>)
+            .then((question) => this.props.history.push(`/questions/${question.question.id}`))
         // .then(()=> console.log("success"));
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit} className="create-question-form-container">
-            {/* <div className="create-question-form"> */}
-                {/* <section className="left-nav-bar"><LeftNavBar/></section> */}
 
                 <section className="question-header">
                     <h1>Ask a Public Question</h1>
