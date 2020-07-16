@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_09_122526) do
+ActiveRecord::Schema.define(version: 2020_07_14_201445) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.string "body", null: false
+    t.integer "question_id", null: false
+    t.integer "answerer_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["answerer_id"], name: "index_answers_on_answerer_id"
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
 
   create_table "questions", force: :cascade do |t|
     t.integer "asker_id", null: false
@@ -35,6 +45,17 @@ ActiveRecord::Schema.define(version: 2020_06_09_122526) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.bigint "votable_id"
+    t.string "votable_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_id"
+    t.index ["user_id", "votable_type", "votable_id"], name: "index_votes_on_user_id_and_votable_type_and_votable_id", unique: true
+    t.index ["votable_id"], name: "index_votes_on_votable_id"
+    t.index ["votable_type"], name: "index_votes_on_votable_type"
   end
 
 end
