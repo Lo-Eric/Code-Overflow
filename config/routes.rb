@@ -11,9 +11,10 @@ Rails.application.routes.draw do
         post :downvote, to: 'questions#downvote', as: 'downvote'
       end
 
-      resources :answers, only: [:index, :show, :create]
+      resources :answers, only: [:index, :create]
     end
 
+    resources :answers, only: [:show, :update, :destroy]
     post 'vote', to: "votes#vote"
   end
 

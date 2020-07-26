@@ -1,19 +1,25 @@
-export const fetchAnswers = () => {
+export const fetchAnswers = (questionId) => {
     return $.ajax ({
         method: "GET",
-        url: '/api/questions'
+        url: `/api/questions/${questionId}/answers`
+    })
+}
+export const fetchAnswer = (answerId) => {
+    return $.ajax ({
+        method: "GET",
+        url: `/api/answers/${answerId}`
     })
 }
 
-export const createAnswer = (answer) => {
+export const createAnswer = (questionId, answer) => {
     return $.ajax({
         method: 'POST',
-        url: '/api/questions',
-        data: { question }
+        url: `/api/questions/${questionId}/answers`,
+        data: { questionId, answer }
     });
 };
 
-export const updateAnswer = (answer) => {
+export const updateAnswer = (question) => {
     return $.ajax({
         method: 'PATCH',
         url: `api/questions/${question.id}`,
@@ -25,6 +31,6 @@ export const updateAnswer = (answer) => {
 export const deleteAnswer = (answerId) => {
     return $.ajax({
         method: 'DELETE',
-        url: `/api/questions/${questionId}`,
+        url: `/api/answers/${answerId}`,
     });
 };

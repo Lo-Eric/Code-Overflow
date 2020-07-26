@@ -1,22 +1,22 @@
-import { RECEIVE_QUESTIONS, RECEIVE_QUESTION, REMOVE_QUESTION } from '../actions/question_actions';
+import { RECEIVE_ANSWERS, RECEIVE_ANSWER, REMOVE_ANSWER } from '../actions/answer_actions';
 
-const _nullQuestion = {};
+const _nullAnswer = {};
 
-const questionsReducer = (state = _nullQuestion, action) => {
+const answersReducer = (state = _nullAnswer, action) => {
     switch (action.type) {
-        case RECEIVE_QUESTIONS:
-            return Object.assign({}, state, action.questions);
-        case RECEIVE_QUESTION:
-            return Object.assign({}, state, { [action.question.id]: action.question });
-        case REMOVE_QUESTION:
+        case RECEIVE_ANSWERS:
+            return Object.assign({}, state, action.answers);
+        case RECEIVE_ANSWER:
+            return Object.assign({}, state, { [action.answer.id]: action.answer });
+        case REMOVE_ANSWER:
             let nextState = Object.assign({}, state);
-            delete nextState[action.questionId];
+            delete nextState[action.answerId];
             return nextState;
         default:
             return state;
     }
 };
 
-export default questionsReducer;
+export default answersReducer;
 
 
