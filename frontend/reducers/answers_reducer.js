@@ -10,7 +10,7 @@ const answersReducer = (state = _nullAnswer, action) => {
             return Object.assign({}, state, { [action.answer.id]: action.answer });
         case REMOVE_ANSWER:
             let nextState = Object.assign({}, state);
-            delete nextState[action.answerId];
+            delete nextState[action.answer.id];
             return nextState;
         default:
             return state;

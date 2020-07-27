@@ -12,6 +12,7 @@ class Api::AnswersController < ApplicationController
   def create
     @answer = Answer.create(answer_params)
     @answer.answerer_id = current_user.id
+    @answer.question_id = params[:id]
 
     if @answer.save
       render 'api/answers/show'
@@ -22,6 +23,6 @@ class Api::AnswersController < ApplicationController
 
   private
   def answer_params
-    params.require(:answer).permit(:body, :question_id)
+    params.require(:answer).permit(:body)
   end
 end

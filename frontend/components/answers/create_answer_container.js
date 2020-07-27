@@ -12,7 +12,7 @@ const mSTP = (state) => {
 }
 
 const mDTP = (dispatch) => ({
-    createAnswer: (answer, questionId) => dispatch(createAnswer(answer, questionId)),
+    createAnswer: ( questionId, answer ) => dispatch(createAnswer( questionId, answer )),
 });
 
 export default connect(mSTP, mDTP)(CreateAnswerForm);
