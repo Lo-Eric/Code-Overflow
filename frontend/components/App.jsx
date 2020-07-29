@@ -57,9 +57,9 @@ const App = () => (
             {/* <ProtectedRoute exact path="/questions/:questionId" component={QuestionsIndexContainer}/> */}
         </Switch>
 
-        <nav className="footer">
+        {/* <nav className="footer">
             <Footer />
-        </nav>
+        </nav> */}
     </div>
 );
 

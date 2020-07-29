@@ -1,11 +1,15 @@
 import React from 'react';
+import ReactQuill from 'react-quill';
 import LeftNavBar from '../left_nav_bar/left_nav';
 
 class CreateAnswerForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.answer;
+        this.state = {
+            body: '',
+        }
         
+        this.updateState = this.updateState.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -15,36 +19,66 @@ class CreateAnswerForm extends React.Component {
         this.props.createAnswer( this.props.question.id, answer )
     }
 
-    update(field) {
-        return e => this.setState({ [field]: e.currentTarget.value });
+    updateState(value){
+        this.setState({ body: value })
     }
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit} className="create-answer-form-container">
-
-                {/* <section className="answer-header"> */}
-                    <h3>Your Answer</h3>
-                    <div className="answer-content">
-                        <label>Body:
-                            <input type="text"
-                                value={this.state.body}
-                                onChange={this.update('body')}
-                                className="answer-input"
-                            />
-                        </label>
-                       
-                    </div>
-                {/* </section> */}
-                <br />
-                <button id="post-answer-btn" type="submit">
-                    Post Your Answer
-                </button>
-                <br />
-            </form>
-        )
+          <form className="answer-form" onSubmit={this.handleSubmit}>
+            <h2 className="answer-form-headline">Your Answer</h2>
+            <ReactQuill
+              modules={CreateAnswerForm.modules}
+              formats={CreateAnswerForm.formats}
+              value={this.state.body}
+              onChange={this.updateState}
+            />
+            <input
+              type="submit"
+              className="answer-submit-btn"
+              value="Post Your Answer"
+            />
+          </form>
+        );
     }
 
 }
+
+CreateAnswerForm.modules = {
+  toolbar: [
+    [{ header: "1" }, { header: "2" }, { font: [] }],
+    [{ size: [] }],
+    ["bold", "italic", "underline", "strike", "blockquote"],
+    [
+      { list: "ordered" },
+      { list: "bullet" },
+      { indent: "-1" },
+      { indent: "+1" },
+    ],
+    ["link", "image", "video"],
+    ["clean"],
+  ],
+  clipboard: {
+ 
+    matchVisual: false,
+  },
+};
+
+CreateAnswerForm.formats = [
+  "header",
+  "font",
+  "size",
+  "bold",
+  "italic",
+  "underline",
+  "strike",
+  "blockquote",
+  "list",
+  "bullet",
+  "indent",
+  "link",
+  "image",
+  "video",
+];
 
 export default CreateAnswerForm;

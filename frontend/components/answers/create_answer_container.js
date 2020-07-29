@@ -1,12 +1,14 @@
 import { connect } from "react-redux";
 import { createAnswer } from '../../actions/answer_actions';
-import { CreateAnswerForm } from './create_answer';
+import CreateAnswerForm  from './create_answer';
 
 const mSTP = (state) => {
     return {
-        answer: {
-            body: "",
-        }
+        // answer: {
+        //     body: "",
+         // }
+        errors: state.errors.answers,
+        
     }
     
 }

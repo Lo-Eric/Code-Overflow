@@ -53,7 +53,10 @@ const Splash = () => {
                     <p>Accelerate the discovery of your products or services through our Advertising platform</p>
                 </div>
             </section>
-            {/* <footer><Footer /></footer> */}
+
+            <div className="footer">
+                <Footer />
+            </div>
     </div>    
     )
 };

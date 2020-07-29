@@ -10,6 +10,7 @@ class Api::AnswersController < ApplicationController
   end
 
   def create
+    debugger
     @answer = Answer.create(answer_params)
     @answer.answerer_id = current_user.id
     @answer.question_id = params[:id]
