@@ -51,7 +51,8 @@
 
 }
 
-.question-content-2 {
+.question-content {
     /* z-index: -1 !important; */
+    flex-direction: column;
 }
 

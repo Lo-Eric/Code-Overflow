@@ -38,11 +38,6 @@ export const createAnswer = (questionId, answer) => (dispatch) => {
     return AnswerAPIUtil.createAnswer(questionId, answer).then((ans) => dispatch(receiveAnswer(ans)));
 };
 
-export const updateQuestion = (question) => (dispatch) => {
-    return AnswerAPIUtil.updateAnswer(question).then((res) => dispatch(receiveQuestion(res)));
-};
-
-
 export const deleteAnswer = (questionId) => (dispatch) => {
     return AnswerAPIUtil.deleteAnswer(questionId).then(() => dispatch(removeQuestion(questionId)));
 };

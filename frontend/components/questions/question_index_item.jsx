@@ -7,7 +7,6 @@ class QuestionIndexItem extends React.Component{
     }
 
     render() {
-        // debugger
         return (
             <section className="question-index-item">
              
