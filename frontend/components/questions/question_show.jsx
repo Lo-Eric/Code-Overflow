@@ -30,6 +30,18 @@ class QuestionShowForm extends React.Component {
               <LeftNavBar />
             </section>
 
+{/* 
+            <section className="question-voting">
+              <button className={`up-arrow ${this.props.question.currentUserVote === 'up_vote' ? 'current-user-vote' : ''}`} onClick={this.handleVote("up_vote")}>
+                <svg className="svg-icon" aria-hidden="true" width="36" height="36" viewBox="0 0 36 36"><path d="M2 26h32L18 10z"></path></svg>
+              </button>
+
+              <div className="question-score">{this.props.question.score}</div>
+              <button className={`down-arrow ${this.props.question.currentUserVote === 'down_vote' ? 'current-user-vote' : ''}`} onClick={this.handleVote("down_vote")} >
+                <svg className="svg-icon" aria-hidden="true" width="36" height="36" viewBox="0 0 36 36"><path d="M2 10h32L18 26z"></path></svg>
+              </button>
+            </section> */}
+
             <section className="question-show-content">
               <h2 className="question-title">{this.props.question.title}</h2>
               <div className="divider">.</div>
@@ -53,7 +65,7 @@ class QuestionShowForm extends React.Component {
                   ))}
                 </ul>
               ) : (
-                <p>This question has not been answered yet.</p>
+                <ul>This question has not been answered yet.</ul>
               )}
 
               <CreateAnswerContainer question={this.props.question} />
