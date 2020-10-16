@@ -65,7 +65,7 @@ class QuestionShowForm extends React.Component {
                   ))}
                 </ul>
               ) : (
-                <ul>This question has not been answered yet.</ul>
+                <p>This question has not been answered yet.</p>
               )}
 
               <CreateAnswerContainer question={this.props.question} />
