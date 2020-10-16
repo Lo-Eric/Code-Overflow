@@ -16,6 +16,7 @@
     /* position: absolute; */
     /* margin-top: 10px; */
     padding-left: 40px;
+    /* overflow: auto; */
 }
 
 .questions-header h2 {
@@ -110,4 +111,9 @@ a {
     border: 1px solid #7aa7c7;
     height: 20px;
     margin-left: 400px;
+}
+
+.footer {
+    /* z-index: 1; */
+    bottom: 0;
 }

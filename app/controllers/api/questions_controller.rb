@@ -10,15 +10,21 @@ class Api::QuestionsController < ApplicationController
     end
 
     def create
-        debugger
         @question = Question.new(question_params)
         @question.asker_id = current_user.id
         
         if @question.save
-            render '/api/questions/show'
+            render '/api/questions/show', include: :answers
         else
             render json: @question.errors.full_messages, status: 422
         end
+    end
+
+    def destroy
+        @question = Question.find(params[:id])
+        @question.destroy
+
+        render '/api/questions/show'
     end
 
     # def upvote 

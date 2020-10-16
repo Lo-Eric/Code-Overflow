@@ -8,11 +8,11 @@ const mapStateToProps = state => ({
     //     body: '',
     //     views: 0
     // }
-    question: state.entities.questions
+    question: state.entities.questions,
+    formType: 'Create Question'
 });
 
 const mapDispatchToProps = dispatch => {
-    debugger
     return {
     createQuestion: (question) => dispatch(createQuestion(question))
     }

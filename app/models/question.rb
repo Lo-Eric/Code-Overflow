@@ -5,6 +5,7 @@ class Question < ApplicationRecord
     foreign_key: :asker_id,
     class_name: 'User'
 
-    has_many :votes, 
-    as: :votable
+    has_many :answers, dependent: :destroy
+
+    has_many :votes, as: :votable
 end

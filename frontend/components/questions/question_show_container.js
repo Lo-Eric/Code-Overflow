@@ -12,7 +12,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch) => ({
     fetchQuestion: questionId => dispatch(fetchQuestion(questionId)),
-    deleteQuestion: question => dispatch(deleteQuestion(question)),
+    deleteQuestion: questionId => dispatch(deleteQuestion(questionId)),
 });
 
 export default connect(mSTP, mDTP)(QuestionShowForm);

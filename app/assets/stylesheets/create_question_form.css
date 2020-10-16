@@ -24,9 +24,7 @@
 .question-header {
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
-    justify-content: center;
-    align-items: center;
+    margin-top: 60px;
     position: absolute;
     left: 100px !important;
     top: 50px;
@@ -34,21 +32,32 @@
 
 .question-header h1 {
     padding-bottom: 50px;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     /* border-bottom: 1px solid #e0e0e0; */
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
 }
 
 .question-content {
+    box-shadow: 0 0 3px 1px rgba(85, 84, 84, 0.404);
     display: flex;
     flex-direction: column;
     background: white !important;
     width: 60vw;
     height: 30vw;
     padding: 15px 14px;
+    font-weight: bold;
+    line-height: 15px;
 }
 
+.question-content p {
+    font-size: 0.9rem;
+    font-weight: normal !important;
+}
+
+.question-content .body2 {
+    margin-top: 15px;
+}
 
 .login-form label {
     display: block;
@@ -68,7 +77,7 @@
 .right {
     position: absolute;
     left: 1000px !important;
-    top: 210px;
+    top: 185px;
     box-shadow: 0 0 3px 1px rgba(85, 84, 84, 0.404);
     background-color: white;
     font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;

@@ -54,9 +54,9 @@ const Splash = () => {
                 </div>
             </section>
 
-            <div className="footer">
+            <section className="footer">
                 <Footer />
-            </div>
+            </section>
     </div>    
     )
 };

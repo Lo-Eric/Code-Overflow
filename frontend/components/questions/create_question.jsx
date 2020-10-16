@@ -22,44 +22,60 @@ class CreateQuestionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const question = Object.assign({}, this.state);
-        this.props.createQuestion(question)
-            // .then(()=> console.log(this.state))
-            // .then(()=> <Redirect to='/home'/>)
+        this.props
+            .createQuestion(question)
             .then((question) => this.props.history.push(`/questions/${question.question.id}`))
-        // .then(()=> console.log("success"));
     }
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit} className="create-question-form-container">
+          <form
+            onSubmit={this.handleSubmit}
+            className="create-question-form-container"
+          >
+            <section className="question-header">
+              <h1>Ask a Public Question</h1>
+              <div className="question-content">
+                <label className="title2">
+                  Title
+                  <p>
+                    Be specific and imagine you’re asking a question to another
+                    person
+                  </p>
+                  <input
+                    type="text"
+                    value={this.state.title}
+                    onChange={this.update("title")}
+                    className="question-input"
+                  />
+                </label>
+                <label className="body2">
+                  Body
+                  <p>
+                    Include all the information someone would need to answer
+                    your question 
+                  </p>
+                  <input
+                    type="text"
+                    value={this.state.body}
+                    onChange={this.update("body")}
+                    className="question-input"
+                  />
+                </label>
+                <input
+                  className="question-submit"
+                  type="submit"
+                  value="submit"
+                />
+              </div>
+            </section>
 
-                <section className="question-header">
-                    <h1>Ask a Public Question</h1>
-                    <div className="question-content">
-                        <label>Title:
-                            <input type="text"
-                                    value={this.state.title}
-                                    onChange={this.update('title')}
-                                    className="question-input"
-                                />
-                        </label>
-                        <label>Body:
-                            <input type="text"
-                                    value={this.state.body}
-                                    onChange={this.update('body')}
-                                    className="question-input"
-                                />
-                        </label>
-                         <input className="question-submit" type="submit" value="submit" /> 
-                    </div>
-                </section>
-
-                <section className="right">
-                    <div className="right_header">Step 1: Draft your question</div>
-                </section>
+            <section className="right">
+              <div className="right_header">Step 1: Draft your question</div>
+            </section>
             {/* </div> */}
-            </form>
-        )
+          </form>
+        );
     }
 }
 

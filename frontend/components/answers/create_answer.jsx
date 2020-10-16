@@ -1,28 +1,49 @@
 import React from 'react';
 import ReactQuill from 'react-quill';
 import LeftNavBar from '../left_nav_bar/left_nav';
+import parse from "html-react-parser";
 
 class CreateAnswerForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      body: "",
-    };
+    this.state = this.props.answer;
 
     this.updateState = this.updateState.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+
+    this.modules = {
+      toolbar: [
+        [{ header: "1" }, { header: "2" }, { font: [] }],
+        [{ size: [] }],
+        ["bold", "italic", "underline", "strike", "blockquote"],
+        [
+          { list: "ordered" },
+          { list: "bullet" },
+          { indent: "-1" },
+          { indent: "+1" },
+        ],
+        ["link", "image", "video"],
+        ["clean"],
+      ],
+      clipboard: {
+        matchVisual: false,
+      },
+    };
   }
 
-//   componentDidMount() {
-//     debugger
-//     this.props.fetchQuestion(this.props.question);
-//   } //new addition, remove after debuggin
+  //   componentDidMount() {
+  //     debugger
+  //     this.props.fetchQuestion(this.props.question);
+  //   } 
 
   handleSubmit(e) {
-    debugger;
     e.preventDefault();
-    const answer = Object.assign({}, this.state);
-    this.props.createAnswer(this.props.question.id, answer);
+    const parsedBody = {body: parse(this.state.body).props['children']};
+    const questionId = {question_id: this.state.questionId}
+    const answer = Object.assign({}, parsedBody, questionId);
+    this.props
+      .createAnswer(this.props.question.id, answer)
+      .then(()=> this.props.history.push(`/questions/${this.props.question.id}`))
   }
 
   updateState(value) {
@@ -34,10 +55,12 @@ class CreateAnswerForm extends React.Component {
       <form className="answer-form" onSubmit={this.handleSubmit}>
         <h2 className="answer-form-headline">Your Answer</h2>
         <ReactQuill
-          modules={CreateAnswerForm.modules}
+          class="ql-editor"
+          modules={this.modules}
           formats={CreateAnswerForm.formats}
           value={this.state.body}
           onChange={this.updateState}
+          // readOnly={true}
         />
         <input
           type="submit"
@@ -49,25 +72,6 @@ class CreateAnswerForm extends React.Component {
   }
 }
 
-CreateAnswerForm.modules = {
-  toolbar: [
-    [{ header: "1" }, { header: "2" }, { font: [] }],
-    [{ size: [] }],
-    ["bold", "italic", "underline", "strike", "blockquote"],
-    [
-      { list: "ordered" },
-      { list: "bullet" },
-      { indent: "-1" },
-      { indent: "+1" },
-    ],
-    ["link", "image", "video"],
-    ["clean"],
-  ],
-  clipboard: {
- 
-    matchVisual: false,
-  },
-};
 
 CreateAnswerForm.formats = [
   "header",

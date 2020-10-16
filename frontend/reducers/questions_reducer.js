@@ -16,7 +16,7 @@ const questionsReducer = (state = _nullQuestion, action) => {
             return state;
     }
 };
-
+ 
 export default questionsReducer;
 
 
