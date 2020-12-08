@@ -7,11 +7,12 @@ import { Route, Redirect, withRouter } from 'react-router-dom';
 class CreateQuestionForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            title: '',
-            body: '',
-            views: 0
-        };
+        // this.state = {
+        //     title: '',
+        //     body: '',
+        //     views: 0
+        // };
+        this.state = this.props.question;
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -31,10 +32,10 @@ class CreateQuestionForm extends React.Component {
         return (
           <form
             onSubmit={this.handleSubmit}
-            className="create-question-form-container"
+            className="create-question-form-container" 
           >
             <section className="question-header">
-              <h1>Ask a Public Question</h1>
+              {this.props.formType === "Edit" ? (<h1>Question update form</h1>) : (<h1>Ask a Public Question</h1> )}
               <div className="question-content">
                 <label className="title2">
                   Title
@@ -59,7 +60,7 @@ class CreateQuestionForm extends React.Component {
                     type="text"
                     value={this.state.body}
                     onChange={this.update("body")}
-                    className="question-input"
+                    className="question-input-body"
                   />
                 </label>
                 <input

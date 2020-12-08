@@ -3,13 +3,12 @@ import { createQuestion } from "../../actions/question_actions";
 import CreateQuestionForm from "./create_question";
 
 const mapStateToProps = (state) => ({
-  // question: {
-  //     title: '',
-  //     body: '',
-  //     views: 0
-  // }
-  question: state.entities.questions,
-  formType: "Edit Question",
+  question: {
+      title: '',
+      body: '',
+      views: 0
+  },
+  formType: "Edit"
 });
 
 const mapDispatchToProps = (dispatch) => {

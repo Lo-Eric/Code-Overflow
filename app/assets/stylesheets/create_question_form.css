@@ -53,6 +53,7 @@
 .question-content p {
     font-size: 0.9rem;
     font-weight: normal !important;
+    margin: 5px 0px;
 }
 
 .question-content .body2 {
@@ -68,10 +69,15 @@
 }
 
 .question-input {
-    width: 150px;
+    width: 50vw;
     display: flex;
     align-items: center;
-    margin-top: 5px;
+}
+.question-input-body {
+    width: 50vw;
+    height: 200px;
+    display: flex;
+    align-items: center;
 }
 
 .right {
@@ -88,4 +94,8 @@
     background: #eff0f1 !important;
     height: 20px;
     padding: 10px 20px;
+}
+
+.question-submit {
+    margin-top: 20px;
 }

@@ -6,6 +6,7 @@ import { fetchQuestion, deleteQuestion } from '../../actions/question_actions';
 
 const mSTP = (state, ownProps) => {
     return {
+    // currentUser = state.
     question: state.entities.questions[ownProps.match.params.questionId]
     }
 };

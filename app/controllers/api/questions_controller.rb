@@ -27,25 +27,25 @@ class Api::QuestionsController < ApplicationController
         render '/api/questions/show'
     end
 
-    # def upvote 
-    #     vote = Vote.new(user_id: params[:user_id], votable_id: params[:id], votable_type: 'Question')
+    def upvote 
+        vote = Vote.new(user_id: params[:user_id], votable_id: params[:id], votable_type: 'Question')
         
-    #     if vote.save
-    #         render json: "Successfully saved"
-    #     else
-    #         render json: vote.errors.full_messages, status: :unprocessable_entity
-    #     end
-    # end
+        if vote.save
+            render json: "Successfully saved"
+        else
+            render json: vote.errors.full_messages, status: :unprocessable_entity
+        end
+    end
 
-    # def downvote
-    #     vote = Vote.new(user_id: params[:user_id], votable_id: params[:id], votable_type: 'Question')
+    def downvote
+        vote = Vote.new(user_id: params[:user_id], votable_id: params[:id], votable_type: 'Question')
   
-    #     if vote.destroy
-    #         render json: "Successfully saved"
-    #     else
-    #         render json: vote.errors.full_messages, status: :unprocessable_entity
-    #     end
-    # end
+        if vote.destroy
+            render json: "Successfully saved"
+        else
+            render json: vote.errors.full_messages, status: :unprocessable_entity
+        end
+    end
 
     private
 

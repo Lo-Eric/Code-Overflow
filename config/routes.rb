@@ -6,15 +6,28 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
     resources :questions, only: [:index, :show, :create, :update, :destroy] do 
+      # member do
+      #   post :upvote, to: 'questions#upvote', as: 'upvote'
+      #   post :downvote, to: 'questions#downvote', as: 'downvote'
+      # end
       member do
-        post :upvote, to: 'questions#upvote', as: 'upvote'
-        post :downvote, to: 'questions#downvote', as: 'downvote'
+        post 'upvote'
+        post 'downvote' 
       end
 
       resources :answers, only: [:index, :create]
     end
 
     resources :answers, only: [:show, :update, :destroy]
+      # member do
+      #   post :upvote, to: 'answers#upvote', as: 'upvote'
+      #   post :downvote, to: 'answers#downvote', as: 'downvote'
+      # end
+      #  member do
+      #   post 'upvote'
+      #   post 'downvote'
+      # end
+
     post 'vote', to: "votes#vote"
   end
 
