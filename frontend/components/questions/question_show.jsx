@@ -59,17 +59,20 @@ class QuestionShowForm extends React.Component {
             {this.props.question.body}
           </div>
 
-          <div className='btns'>
-            <Link
-              id="button1"
-              to={`/questions/${this.props.question.id}/edit`}
-            >
-              Edit
-            </Link>
+          {this.props.question.asker_id === this.props.currentUser.id ? (
+            <div className='btns'>
+              <Link
+                id="edit-btn"
+                to={`/questions/${this.props.question.id}/edit`}
+              >
+                Edit
+              </Link>
 
-            <button id="delete-btn" onClick={this.deleteQuestion}>Delete</button>
-          </div>
-
+              <button id="delete-btn" onClick={this.deleteQuestion}>Delete</button>
+            </div>
+            
+          ) : null}
+          
           {this.props.question.answers ? (
             <ul>
               <h3>{this.props.question.answers.length} Answers</h3>
@@ -81,9 +84,7 @@ class QuestionShowForm extends React.Component {
                 />
               ))}
             </ul>
-          ) : (
-            <p>This question has not been answered yet.</p>
-          )}
+          ) : null}
 
           <CreateAnswerContainer question={this.props.question} />
         </section>

@@ -7,11 +7,6 @@ import { Route, Redirect, withRouter } from 'react-router-dom';
 class CreateQuestionForm extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     title: '',
-        //     body: '',
-        //     views: 0
-        // };
         this.state = this.props.question;
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -23,8 +18,13 @@ class CreateQuestionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const question = Object.assign({}, this.state);
+
+        this.props.formType === "Create" ? 
         this.props
             .createQuestion(question)
+            .then((question) => this.props.history.push(`/questions/${question.question.id}`))
+        : this.props
+            .updateQuestion(question)
             .then((question) => this.props.history.push(`/questions/${question.question.id}`))
     }
 

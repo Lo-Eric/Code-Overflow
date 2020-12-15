@@ -8,7 +8,6 @@ const mapStateToProps = state => ({
         body: '',
         views: 0
     },
-    // question: state.entities.questions,
     formType: 'Create'
 });
 
