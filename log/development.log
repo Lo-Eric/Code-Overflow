@@ -66989,3 +66989,450 @@ Processing by Api::QuestionsController#show as JSON
 Completed 200 OK in 185ms (Views: 112.4ms | ActiveRecord: 28.9ms)
 
 
+Started GET "/" for ::1 at 2020-12-15 11:49:07 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (27.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "u7c7reoxau92t34Q0nyKpQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (5.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (92.2ms)
+Completed 200 OK in 949ms (Views: 884.3ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/api/questions/57" for ::1 at 2020-12-15 11:49:10 -0500
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"57"}
+  [1m[36mQuestion Load (1.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (22.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 57]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (26.8ms)
+Completed 200 OK in 51ms (Views: 25.1ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/" for ::1 at 2020-12-15 11:49:22 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "u7c7reoxau92t34Q0nyKpQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 177ms (Views: 155.3ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/api/questions/57" for ::1 at 2020-12-15 11:49:26 -0500
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"57"}
+  [1m[36mQuestion Load (9.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (1.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 57]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (13.6ms)
+Completed 200 OK in 53ms (Views: 37.4ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/" for ::1 at 2020-12-15 11:49:27 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "u7c7reoxau92t34Q0nyKpQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (2.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 167ms (Views: 151.2ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/api/questions/57" for ::1 at 2020-12-15 11:49:28 -0500
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"57"}
+  [1m[36mQuestion Load (2.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (32.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 57]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (35.8ms)
+Completed 200 OK in 58ms (Views: 21.3ms | ActiveRecord: 34.6ms)
+
+
+Started GET "/api/questions/57" for ::1 at 2020-12-15 11:50:08 -0500
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"57"}
+  [1m[36mQuestion Load (5.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (18.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 57]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (22.5ms)
+Completed 200 OK in 56ms (Views: 29.4ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/api/questions/57" for ::1 at 2020-12-15 11:50:16 -0500
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"57"}
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (17.7ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 57]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (20.8ms)
+Completed 200 OK in 40ms (Views: 20.3ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/api/questions" for ::1 at 2020-12-15 11:50:20 -0500
+Processing by Api::QuestionsController#index as JSON
+  Rendering api/questions/index.json.jbuilder
+  [1m[36mQuestion Load (17.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/api/questions/index.json.jbuilder:1
+  Rendered api/questions/index.json.jbuilder (31.5ms)
+Completed 200 OK in 53ms (Views: 34.8ms | ActiveRecord: 17.3ms)
+
+
+Started POST "/api/questions" for ::1 at 2020-12-15 11:50:31 -0500
+Processing by Api::QuestionsController#create as JSON
+  Parameters: {"question"=>{"title"=>"hellohellohellohellohellohellohello", "body"=>"hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello", "views"=>"0"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "u7c7reoxau92t34Q0nyKpQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/questions_controller.rb:16
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:16
+  [1m[36mQuestion Create (4.6ms)[0m  [1m[32mINSERT INTO "questions" ("asker_id", "views", "title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["asker_id", 37], ["views", 0], ["title", "hellohellohellohellohellohellohello"], ["body", "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello"], ["created_at", "2020-12-15 16:50:31.159332"], ["updated_at", "2020-12-15 16:50:31.159332"]]
+  ↳ app/controllers/api/questions_controller.rb:16
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/questions_controller.rb:16
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (12.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 58]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (14.3ms)
+Completed 200 OK in 41ms (Views: 13.9ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/api/questions/58" for ::1 at 2020-12-15 11:50:31 -0500
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"58"}
+  [1m[36mQuestion Load (26.9ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (25.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 58]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (31.4ms)
+Completed 200 OK in 81ms (Views: 26.5ms | ActiveRecord: 52.7ms)
+
+
+Started PATCH "/api/questions/58" for ::1 at 2020-12-15 11:50:42 -0500
+Processing by Api::QuestionsController#update as JSON
+  Parameters: {"question"=>{"id"=>"58", "asker_id"=>"37", "title"=>"hellohellohellohellohellohellohello", "body"=>"hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello", "views"=>"0"}, "id"=>"58"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:24
+Unpermitted parameters: :id, :asker_id
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/questions_controller.rb:26
+  [1m[36mUser Load (24.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:26
+  [1m[36mQuestion Update (15.4ms)[0m  [1m[33mUPDATE "questions" SET "body" = $1, "updated_at" = $2 WHERE "questions"."id" = $3[0m  [["body", "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello"], ["updated_at", "2020-12-15 16:50:42.345097"], ["id", 58]]
+  ↳ app/controllers/api/questions_controller.rb:26
+  [1m[35m (27.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/questions_controller.rb:26
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 58]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (3.1ms)
+Completed 200 OK in 102ms (Views: 18.3ms | ActiveRecord: 68.9ms)
+
+
+Started GET "/api/questions/58" for ::1 at 2020-12-15 11:50:42 -0500
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"58"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (11.7ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 58]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (24.6ms)
+Completed 200 OK in 54ms (Views: 39.1ms | ActiveRecord: 12.1ms)
+
+
+Started PATCH "/api/questions/58" for ::1 at 2020-12-15 11:50:55 -0500
+Processing by Api::QuestionsController#update as JSON
+  Parameters: {"question"=>{"id"=>"58", "asker_id"=>"37", "title"=>"hellohellohellohellohellohellohello", "body"=>"hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello", "views"=>"0"}, "id"=>"58"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:24
+Unpermitted parameters: :id, :asker_id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/questions_controller.rb:26
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:26
+  [1m[36mQuestion Update (0.7ms)[0m  [1m[33mUPDATE "questions" SET "body" = $1, "updated_at" = $2 WHERE "questions"."id" = $3[0m  [["body", "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello"], ["updated_at", "2020-12-15 16:50:55.967197"], ["id", 58]]
+  ↳ app/controllers/api/questions_controller.rb:26
+  [1m[35m (24.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/questions_controller.rb:26
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 58]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (2.4ms)
+Completed 200 OK in 65ms (Views: 14.7ms | ActiveRecord: 27.6ms)
+
+
+Started GET "/api/questions/58" for ::1 at 2020-12-15 11:50:56 -0500
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"58"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (18.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 58]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (22.0ms)
+Completed 200 OK in 37ms (Views: 17.0ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/api/questions/58" for ::1 at 2020-12-15 11:53:18 -0500
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"58"}
+  [1m[36mQuestion Load (33.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 58]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (16.8ms)
+Completed 200 OK in 100ms (Views: 62.8ms | ActiveRecord: 33.7ms)
+
+
+Started GET "/api/questions/58" for ::1 at 2020-12-15 11:53:21 -0500
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"58"}
+  [1m[36mQuestion Load (28.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (24.7ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 58]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (28.2ms)
+Completed 200 OK in 80ms (Views: 24.9ms | ActiveRecord: 53.1ms)
+
+
+Started GET "/api/questions" for ::1 at 2020-12-15 11:53:24 -0500
+Processing by Api::QuestionsController#index as JSON
+  Rendering api/questions/index.json.jbuilder
+  [1m[36mQuestion Load (25.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/api/questions/index.json.jbuilder:1
+  Rendered api/questions/index.json.jbuilder (38.4ms)
+Completed 200 OK in 59ms (Views: 32.9ms | ActiveRecord: 25.5ms)
+
+
+Started POST "/api/questions" for ::1 at 2020-12-15 11:53:30 -0500
+Processing by Api::QuestionsController#create as JSON
+  Parameters: {"question"=>{"title"=>"T100", "body"=>"B100", "views"=>"0"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "u7c7reoxau92t34Q0nyKpQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/questions_controller.rb:16
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:16
+  [1m[36mQuestion Create (27.0ms)[0m  [1m[32mINSERT INTO "questions" ("asker_id", "views", "title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["asker_id", 37], ["views", 0], ["title", "T100"], ["body", "B100"], ["created_at", "2020-12-15 16:53:30.668904"], ["updated_at", "2020-12-15 16:53:30.668904"]]
+  ↳ app/controllers/api/questions_controller.rb:16
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/questions_controller.rb:16
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (18.7ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 59]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (22.6ms)
+Completed 200 OK in 99ms (Views: 21.2ms | ActiveRecord: 52.4ms)
+
+
+Started GET "/api/questions/59" for ::1 at 2020-12-15 11:53:30 -0500
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"59"}
+  [1m[36mQuestion Load (1.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (17.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 59]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (22.5ms)
+Completed 200 OK in 44ms (Views: 22.7ms | ActiveRecord: 19.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-12-15 15:07:34 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "u7c7reoxau92t34Q0nyKpQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (5.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "DemoUser"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (7.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "riMWxMtWp8l_v4RvS-ir9Q"], ["updated_at", "2020-12-15 20:07:34.746550"], ["id", 37]]
+  ↳ app/models/user.rb:36
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.6ms)
+  Rendered api/users/show.json.jbuilder (7.2ms)
+Completed 200 OK in 164ms (Views: 37.6ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/" for ::1 at 2020-12-15 15:08:00 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 495ms (Views: 481.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2020-12-15 15:09:20 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"user50", "password"=>"[FILTERED]", "email"=>"email50@gmail.com"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "pk3t9J6e2QwJSeY3NsU5qQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:48
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:7
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user50"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:7
+  [1m[36mUser Create (29.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "user50"], ["email", "email50@gmail.com"], ["password_digest", "$2a$12$DzIAVXQr29LmNbQb.hT6BuggehMWuSGIoTv0Lc9O2knQ88GlBPssa"], ["session_token", "pk3t9J6e2QwJSeY3NsU5qQ"], ["created_at", "2020-12-15 20:09:20.987550"], ["updated_at", "2020-12-15 20:09:20.987550"]]
+  ↳ app/controllers/api/users_controller.rb:7
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "user50"], ["id", 40], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (2.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "0yMln7NDPKxrvzMoyDe2ww"], ["updated_at", "2020-12-15 20:09:21.028909"], ["id", 40]]
+  ↳ app/models/user.rb:36
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/show.json.jbuilder (3.6ms)
+Completed 200 OK in 345ms (Views: 18.0ms | ActiveRecord: 37.0ms)
+
+
+Started GET "/api/questions" for ::1 at 2020-12-15 15:09:21 -0500
+Processing by Api::QuestionsController#index as JSON
+  Rendering api/questions/index.json.jbuilder
+  [1m[36mQuestion Load (20.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/api/questions/index.json.jbuilder:1
+  Rendered api/questions/index.json.jbuilder (54.0ms)
+Completed 200 OK in 83ms (Views: 61.6ms | ActiveRecord: 20.5ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-12-15 15:09:23 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "0yMln7NDPKxrvzMoyDe2ww"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "user50"], ["id", 40], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "rg4wmPsHfz0aDzaA9WnzWw"], ["updated_at", "2020-12-15 20:09:23.925099"], ["id", 40]]
+  ↳ app/models/user.rb:36
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (3.8ms)
+Completed 200 OK in 39ms (Views: 15.6ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2020-12-15 15:55:23 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 229ms (Views: 220.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-12-15 15:55:27 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"DemoEmail@Gmail.com", "password"=>"[FILTERED]", "dropdownShow"=>"false"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "DemoEmail@Gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[35m (12.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "DemoUser"], ["id", 37], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Wjd6ONDTiQ0_1kkknS8WrQ"], ["updated_at", "2020-12-15 20:55:27.513735"], ["id", 37]]
+  ↳ app/models/user.rb:36
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered api/users/show.json.jbuilder (4.7ms)
+Completed 200 OK in 315ms (Views: 16.0ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/api/questions" for ::1 at 2020-12-15 15:55:27 -0500
+Processing by Api::QuestionsController#index as JSON
+  Rendering api/questions/index.json.jbuilder
+  [1m[36mQuestion Load (20.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/api/questions/index.json.jbuilder:1
+  Rendered api/questions/index.json.jbuilder (35.6ms)
+Completed 200 OK in 62ms (Views: 41.7ms | ActiveRecord: 20.0ms)
+
+
+Started POST "/api/questions" for ::1 at 2020-12-15 15:55:33 -0500
+Processing by Api::QuestionsController#create as JSON
+  Parameters: {"question"=>{"title"=>"t200", "body"=>"b200", "views"=>"0"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Wjd6ONDTiQ0_1kkknS8WrQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/questions_controller.rb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:16
+  [1m[36mQuestion Create (28.9ms)[0m  [1m[32mINSERT INTO "questions" ("asker_id", "views", "title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["asker_id", 37], ["views", 0], ["title", "t200"], ["body", "b200"], ["created_at", "2020-12-15 20:55:33.724484"], ["updated_at", "2020-12-15 20:55:33.724484"]]
+  ↳ app/controllers/api/questions_controller.rb:16
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/questions_controller.rb:16
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (27.6ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 60]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (31.2ms)
+Completed 200 OK in 99ms (Views: 20.5ms | ActiveRecord: 58.6ms)
+
+
+Started GET "/api/questions/60" for ::1 at 2020-12-15 15:55:33 -0500
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"60"}
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (6.7ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 60]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (10.7ms)
+Completed 200 OK in 36ms (Views: 23.8ms | ActiveRecord: 7.6ms)
+
+
+Started DELETE "/api/questions/60" for ::1 at 2020-12-15 15:55:35 -0500
+Processing by Api::QuestionsController#destroy as JSON
+  Parameters: {"id"=>"60"}
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/questions_controller.rb:35
+  [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 60]]
+  ↳ app/controllers/api/questions_controller.rb:35
+  [1m[36mQuestion Destroy (6.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 60]]
+  ↳ app/controllers/api/questions_controller.rb:35
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/questions_controller.rb:35
+  Rendering api/questions/show.json.jbuilder
+  Rendered api/questions/show.json.jbuilder (0.8ms)
+Completed 200 OK in 31ms (Views: 13.5ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/api/questions" for ::1 at 2020-12-15 15:55:35 -0500
+Processing by Api::QuestionsController#index as JSON
+  Rendering api/questions/index.json.jbuilder
+  [1m[36mQuestion Load (27.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/api/questions/index.json.jbuilder:1
+  Rendered api/questions/index.json.jbuilder (40.1ms)
+Completed 200 OK in 59ms (Views: 31.9ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/api/questions/6" for ::1 at 2020-12-15 16:07:53 -0500
+Processing by Api::QuestionsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mQuestion Load (2.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/questions_controller.rb:8
+  Rendering api/questions/show.json.jbuilder
+  [1m[36mAnswer Load (0.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  ↳ app/views/api/questions/show.json.jbuilder:4
+  Rendered api/questions/show.json.jbuilder (51.4ms)
+Completed 200 OK in 120ms (Views: 81.1ms | ActiveRecord: 6.5ms)
+
+

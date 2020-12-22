@@ -1,2 +1,2 @@
-json.extract! @question, :id, :asker_id, :title, :body, :views, :answers
+json.extract! @question, :id, :asker_id, :title, :body, :answers
 
