@@ -45,7 +45,6 @@ class CreateAnswerForm extends React.Component {
       .createAnswer(this.props.question.id, answer)
       .then(() => this.props.fetchQuestion(this.props.question.id))
       .then(() => this.setState({ body: ""}))
-      // .then(()=> this.props.history.push(`/questions/${this.props.question.id}`))
   }
 
   updateState(value) {
