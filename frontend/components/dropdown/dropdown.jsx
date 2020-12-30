@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Dropdown extends React.Component {
     constructor(props) {
@@ -19,7 +20,7 @@ class Dropdown extends React.Component {
             <img src={window.dropdown} alt="dropdown-icon" />
         </button>
         <div className={this.state.dropdownShow ? "dropdown-content-show" : "dropdown-content"} id="myDropdown">
-            <h4>Home</h4>
+            <Link to='/home'>Home</Link>
             <h4>Public</h4>
             <h4>Find a job</h4>
             <h4>Teams</h4>

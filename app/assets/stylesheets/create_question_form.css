@@ -8,7 +8,7 @@
     height: 70vw;
  }
 
- .left-nav-bar {
+ /* .left-nav-bar {
     margin-top: 45px;
     border-right: 1px solid #e0e0e0;
     padding-right: 100px;
@@ -19,7 +19,7 @@
     font-size: 13px;
     font-weight: 700;
     color: #0c0d0e;
- }
+ } */
 
 .question-header {
     display: flex;
