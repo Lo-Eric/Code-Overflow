@@ -4,3 +4,21 @@
   color: gray;
 }
 
+.public-content {
+  margin-left: 13px;
+  margin-top: 10px;
+  line-height: 2.5;
+}
+
+#globe-img {
+  vertical-align: middle; 
+  margin-bottom: 3px;
+}
+
+.tags {
+  font-weight: 600;
+}
+
+.users {
+  font-weight: 600;
+}

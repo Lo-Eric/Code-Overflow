@@ -37,7 +37,7 @@
     /* position: relative; */
     margin-top: 45px;
     border-right: 1px solid #e0e0e0;
-    padding-right: 100px;
+    padding-right: 50px;
     padding-top: 40px;
     list-style-type: none;
     text-decoration: none;
@@ -116,4 +116,18 @@ a {
 .footer {
     /* z-index: 1; */
     bottom: 0;
+}
+
+.watched-tags-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.watched-tags-content p {
+    margin-top: 20px;
+    color: gray;
+    font-size: 15px;
 }
