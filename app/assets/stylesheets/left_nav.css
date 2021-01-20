@@ -22,3 +22,11 @@
 .users {
   font-weight: 600;
 }
+
+.tags:hover {
+  color: gray;
+}
+
+.users:hover {
+  color: gray;
+}
