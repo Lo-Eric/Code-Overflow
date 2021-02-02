@@ -5,24 +5,12 @@
     margin: auto;
     height: 50vw;
 }
-/* 
-.left-nav-bar {
-    margin-top: 45px;
-    border-right: 1px solid #e0e0e0;
-    padding-right: 100px;
-    padding-top: 40px;
-    list-style-type: none;
-    text-decoration: none;
-    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: #0c0d0e;
-} */
 
 .question-title {
     padding: 82px 30px;
     font-size: 1.8rem;
     font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    color: #8B0000;
 }
 
 .question-show-page ul{
@@ -39,7 +27,7 @@
     display: flex;
     flex-direction: row;
     margin: 30px 30px;
-    font-size: 16px;
+    font-size: 18px;
     
 }
 
@@ -62,7 +50,7 @@
 
 #answer-content {
     margin: 30px 30px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .btns {
@@ -75,7 +63,7 @@
     flex-direction: column !important;
 }
 
-#vote-btns {
+.vote-btns {
     display: flex;
     flex-direction: column;
     padding-right: 20px;

@@ -6,6 +6,10 @@ class QuestionIndexItem extends React.Component{
         super(props);
     }
 
+    // componentDidMount(){
+    
+    // }
+
     render() {
         return (
             <section className="question-index-item">

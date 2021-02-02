@@ -28,7 +28,7 @@ Rails.application.routes.draw do
       #   post 'downvote'
       # end
 
-    post 'vote', to: "votes#vote"
+    resources :votes, only: [:create]
   end
 
 end

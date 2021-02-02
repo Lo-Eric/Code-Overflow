@@ -1,9 +1,9 @@
-export const vote = (voteType, votableType, votableId) => {
+export const createVote = (score, votableType, votableId) => {
   return $.ajax({
     method: 'POST',
-    url: '/api/vote/',
+    url: '/api/votes/',
     data: {
-      vote_type: voteType,
+      score: score,
       votable_type: votableType,
       votable_id: votableId,
     }

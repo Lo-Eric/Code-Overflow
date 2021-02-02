@@ -8,6 +8,7 @@ class QuestionShowForm extends React.Component {
   constructor(props) {
     super(props);
     this.deleteQuestion = this.deleteQuestion.bind(this);
+    this.handleVote = this.handleVote.bind(this);
   };
 
   componentDidMount(){
@@ -20,18 +21,27 @@ class QuestionShowForm extends React.Component {
     .then(()=> this.props.history.push('/home'))
   }
 
-  editQuestion() {
-
-  }
-
-  handleVote() {
-
+  handleVote(score) {
+    return (e) => {
+      e.preventDefault();
+      this.props
+        .createVote(score, 'Question', this.props.question.id)
+        // .then((question) => this.props.history.push(`/questions/${question.question.id}`))
+    }
   }
   
   render () {
     if (!this.props.question) {
         return null
     }; 
+
+    if (this.props.currentUser && this.props.question.asker_id === this.props.currentUser.id) {
+      var editButtons =  
+        <div className='btns'>
+          <Link id="edit-btn" to={`/questions/${this.props.question.id}/edit`}>Edit</Link>
+          <button id="delete-btn" onClick={this.deleteQuestion}>Delete</button>
+        </div>
+    }
       
     return (
       <div className="question-show-page">
@@ -44,34 +54,22 @@ class QuestionShowForm extends React.Component {
           <div className="divider">.</div>
 
           <div className="question-body">
-            <div id="vote-btns">
-              <button>
+            <div className="vote-btns">
+              <button id='upvote-btn' onClick={this.handleVote(-1)}>
                 <svg aria-hidden="true" className="svg-icon m0 iconArrowUpLg" width="36" height="36" viewBox="0 0 36 36">
                   <path d="M2 26h32L18 10z"></path>
                 </svg>
               </button>
 
               {/* <div className="question-score">{this.props.question.score}</div> */}
-              <button>
+              <button id='downvote-btn'>
                 <svg className="svg-icon m0 iconArrowDownLg" aria-hidden="true" width="36" height="36" viewBox="0 0 36 36"><path d="M2 10h32L18 26z"></path></svg>
               </button>
             </div>
             {this.props.question.body}
           </div>
 
-          {this.props.question.asker_id === this.props.currentUser.id ? (
-            <div className='btns'>
-              <Link
-                id="edit-btn"
-                to={`/questions/${this.props.question.id}/edit`}
-              >
-                Edit
-              </Link>
-
-              <button id="delete-btn" onClick={this.deleteQuestion}>Delete</button>
-            </div>
-            
-          ) : null}
+          {editButtons}
           
           {this.props.question.answers ? (
             <ul>
@@ -88,10 +86,6 @@ class QuestionShowForm extends React.Component {
 
           <CreateAnswerContainer question={this.props.question} />
         </section>
-
-        {/* <section className="right-nav-bar">
-          <div className="right-nav-header">Watched Tags</div>
-        </section> */}
 
         <section className="right-nav-bar">
           <div className="right-nav-header">Watched Tags</div>

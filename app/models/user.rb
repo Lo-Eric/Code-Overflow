@@ -14,7 +14,7 @@ class User < ApplicationRecord
   foreign_key: :answerer_id,
   class_name: 'Answer'
 
-  has_many :votes, foreign_key: :voter_id, dependent: :destroy
+  has_many :votes, foreign_key: :voter_id, class_name: 'Vote', dependent: :destroy
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
