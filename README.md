@@ -12,6 +12,9 @@ Users can signup for a new account, login with an existing account, or demo the 
 **Ask or Answer Questions**  
 Ask questions or submit answers to other users' questions using rich text editing.
 
+**Vote on your favorites questions**
+Upvote or downvote questions you like.
+
 
 ## Future Directions
 **Comment on questions or answers**  
