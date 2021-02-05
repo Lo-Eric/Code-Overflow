@@ -26,7 +26,7 @@ Redux 4.0.5
 PostgreSQL 12.3 with PostGIS 3.0.1  
 
 ## Open-Source Libraries 
-[React-Quill]
+React-Quill (https://github.com/zenoamaro/react-quill) for rich-text editing on question and answer forms.
 
 
 
