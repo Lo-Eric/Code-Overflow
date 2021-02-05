@@ -1,6 +1,5 @@
 @questions.each do |question|
-    # debugger
     json.set! question.id do
-        json.extract! question, :id, :title, :body, :asker_id
+        json.extract! question, :id, :title, :body, :asker_id, :votes, :answers
     end
 end

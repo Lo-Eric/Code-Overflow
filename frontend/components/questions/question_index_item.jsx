@@ -7,17 +7,24 @@ class QuestionIndexItem extends React.Component{
     }
 
     // componentDidMount(){
-    
+    //     this.props.fetchVotes(this.props.question.id)
     // }
 
     render() {
+        if (!this.props.question.votes) {
+          return null
+        }; 
+
         return (
             <section className="question-index-item">
              
                 <div className="question-item-stats">
-                    <h4>Votes</h4>
-                    <h4>Answers</h4>
-                    <h4>Views</h4>
+                    <h4>{this.props.question.votes.length}
+                        <br/>Votes</h4>
+                    <h4>{this.props.question.answers.length}
+                        <br/>Answers</h4>
+                    <h4>0
+                        <br/>Views</h4>
                 </div>
                 <Link to={`/questions/${this.props.question.id}`}>
                     <li className="question-item">{this.props.question.title}</li>

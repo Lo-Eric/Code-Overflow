@@ -18,12 +18,16 @@ Ask questions or submit answers to other users' questions using rich text editin
 Users can comment on questions or any answers to those question.
 
 
-## Technologies Used
+## Technologies 
 Ruby 2.5.1p57   
 Rails 5.2.4.3  
 React 16.13.1  
 Redux 4.0.5  
 PostgreSQL 12.3 with PostGIS 3.0.1  
+
+## Open-Source Libraries 
+[React-Quill]
+
 
 
 ## Code Highlights

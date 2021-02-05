@@ -1,12 +1,12 @@
 class Api::QuestionsController < ApplicationController
     def index 
         @questions = Question.all
-        render 'api/questions/index'
+        render 'api/questions/index', include: :votes, include: :answers
     end
 
      def show
         @question = Question.find(params[:id])
-        render '/api/questions/show'
+        render '/api/questions/show', include: :answers
     end
 
     def create

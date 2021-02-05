@@ -1,4 +1,8 @@
 class Api::VotesController < ApplicationController
+  def index
+    @question = Question.find(params[:questionId])
+  end
+  
   def create
     @new_vote = Vote.new(vote_params)
     @new_vote.voter_id = current_user.id

@@ -28,7 +28,7 @@ Rails.application.routes.draw do
       #   post 'downvote'
       # end
 
-    resources :votes, only: [:create]
+    resources :votes, only: [:index, :create]
   end
 
 end

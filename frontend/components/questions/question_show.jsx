@@ -31,9 +31,7 @@ class QuestionShowForm extends React.Component {
   }
   
   render () {
-    if (!this.props.question) {
-        return null
-    }; 
+    if (!this.props.question) return null;
 
     if (this.props.currentUser && this.props.question.asker_id === this.props.currentUser.id) {
       var editButtons =  

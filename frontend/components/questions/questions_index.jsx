@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import QuestionIndexItem from './question_index_item';
+import QuestionIndexItemContainer from './question_index_item_container'
 import LeftNavBar from '../left_nav_bar/left_nav'
 import Footer from '../splash/footer'
+
 
 class QuestionsIndex extends React.Component {
     constructor(props) {
@@ -10,10 +12,14 @@ class QuestionsIndex extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchQuestions();
+      this.props.fetchQuestions();
     }
-
+ 
     render(){
+        if (!this.props.questions) {
+          return null
+        }; 
+        
         return (
           <div className="index-contents">
             <div className="home-contents">
@@ -34,7 +40,7 @@ class QuestionsIndex extends React.Component {
                 <div className="questions-index">
                   <ul>
                     {this.props.questions.map((question, idx) => (
-                      <QuestionIndexItem key={idx} question={question} />
+                      <QuestionIndexItemContainer key={idx} question={question} />
                     ))}
                   </ul>
                 </div>
@@ -49,11 +55,11 @@ class QuestionsIndex extends React.Component {
               </section>
             </div>
 
-            <div>
+            <div id='index-footer'>
               <Footer />
             </div>
           </div>
-        );
+        );qu
     }
 }
 

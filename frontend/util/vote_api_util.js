@@ -9,3 +9,14 @@ export const createVote = (score, votableType, votableId) => {
     }
   });
 };
+
+
+export const fetchVotes = (questionId) => {
+  return (
+    $.ajax({
+      method: 'GET',
+      url: '/api/votes/',
+      data: {questionId}
+    })
+  )
+};

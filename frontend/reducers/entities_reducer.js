@@ -7,7 +7,7 @@ import votesReducer from './votes_reducer';
 const entitiesReducer =  combineReducers({
     users: usersReducer,
     questions: questionsReducer,
-    answers: answersReducer,
+    // answers: answersReducer,
     votes: votesReducer
 });
 

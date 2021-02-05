@@ -29,6 +29,14 @@ const receiveVote = (vote) => {
 //     );
 // };
 
+export const fetchVotes = (questionId) => (dispatch) => {
+  return VoteAPIUtil.fetchVotes(questionId)
+    .then((vote) => dispatch(receiveVote(vote))
+      // (total_votes)  => dispatch(receiveVotes({total_votes, votableType})),
+    //   (errors) => dispatch(receiveVoteErrors(errors.responseJSON))
+    );
+};
+
 export const createVote = (score, votableType, votableId) => (dispatch) => {
   return VoteAPIUtil.createVote(score, votableType, votableId)
     .then((vote) => dispatch(receiveVote(vote))
@@ -36,3 +44,6 @@ export const createVote = (score, votableType, votableId) => (dispatch) => {
     //   (errors) => dispatch(receiveVoteErrors(errors.responseJSON))
     );
 };
+
+
+
