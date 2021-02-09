@@ -58,6 +58,7 @@
 
 .question-show-content {
     flex-direction: column;
+    border-left: 1px solid #e0e0e0;
 }
 
 #answer-content {

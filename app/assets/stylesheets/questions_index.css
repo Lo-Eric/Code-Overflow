@@ -24,13 +24,9 @@
 .questions-index {
     display: flex;
     flex-direction: column;
-    padding-top: 80px;
+    margin-top: 80px;
     border-left: 1px solid #e0e0e0;
     overflow: scroll;
-}
-
-.questions-body {
-    /* border-left: 1px solid #e0e0e0; */
 }
 
 .questions-header h2 {
