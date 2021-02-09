@@ -47,7 +47,7 @@ class CreateQuestionForm extends React.Component {
                     type="text"
                     value={this.state.title}
                     onChange={this.update("title")}
-                    className="question-input" >
+                    className="question-input-title" >
                   </textarea>
                 </label>
                 <label className="body2">

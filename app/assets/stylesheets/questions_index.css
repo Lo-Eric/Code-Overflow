@@ -1,24 +1,23 @@
+.index-contents {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .home-contents {
     display: flex;
     flex-direction: row;
     width: 85vw;
     margin: auto;
-    height: 46vw;
+    height: 100%;
     position: relative;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 .questions-header {
     display: flex;
     flex-direction: column;
     margin-top: 80px;
-}
-
-.questions-index {
-    /* position: absolute; */
-    /* margin-top: 10px; */
-    /* padding-left: 40px; */
-    /* overflow: auto; */
 }
 
 .questions-header h2 {
@@ -137,7 +136,7 @@ a {
 }
 
 #index-footer {
-    position: absolute;
+    /* position: absolute; */
 }
 
 .watched-tags-content {
