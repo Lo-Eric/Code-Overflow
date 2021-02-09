@@ -1,8 +1,8 @@
-.index-contents {
+/* .index-contents {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-}
+} */
 
 .home-contents {
     display: flex;
@@ -11,7 +11,7 @@
     margin: auto;
     height: 100%;
     position: relative;
-    /* overflow: scroll; */
+    overflow: scroll;
 }
 
 .questions-header {
@@ -136,7 +136,9 @@ a {
 }
 
 #index-footer {
-    /* position: absolute; */
+    position: fixed;
+    bottom:0;
+    left:0;
 }
 
 .watched-tags-content {
