@@ -34,4 +34,4 @@ React-Quill (https://github.com/zenoamaro/react-quill) for rich-text editing on 
 
 
 ## Code Highlights
-Voting functionality was built using polymorphic associations.
+Voting functionality was implemented using ruby polymorphic associations.
