@@ -64,7 +64,7 @@ class QuestionShowForm extends React.Component {
                 <svg className="svg-icon m0 iconArrowDownLg" aria-hidden="true" width="36" height="36" viewBox="0 0 36 36"><path d="M2 10h32L18 26z"></path></svg>
               </button>
             </div>
-            {this.props.question.body}
+            <h4>{this.props.question.body}</h4>
           </div>
 
           {editButtons}

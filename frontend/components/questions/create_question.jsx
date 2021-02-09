@@ -43,12 +43,12 @@ class CreateQuestionForm extends React.Component {
                     Be specific and imagine you’re asking a question to another
                     person
                   </p>
-                  <input
+                  <textarea
                     type="text"
                     value={this.state.title}
                     onChange={this.update("title")}
-                    className="question-input"
-                  />
+                    className="question-input" >
+                  </textarea>
                 </label>
                 <label className="body2">
                   Body
@@ -56,12 +56,12 @@ class CreateQuestionForm extends React.Component {
                     Include all the information someone would need to answer
                     your question 
                   </p>
-                  <input
+                  <textarea
                     type="text"
                     value={this.state.body}
                     onChange={this.update("body")}
-                    className="question-input-body"
-                  />
+                    className="question-input-body" >
+                  </textarea>
                 </label>
                 <input
                   className="question-submit"
