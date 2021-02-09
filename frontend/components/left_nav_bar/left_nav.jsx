@@ -9,7 +9,7 @@ const LeftNavBar = () => (
 
         <div className='public-content'>
         <li className="globe-link"><Link to="/home">
-          <img id='globe-img' src="assets/globe.png" height='19' width='19' alt=""/>
+          <img id='globe-img' src={window.globe} height='19' width='19' alt=""/>
           Code Overflow
           {/* <li>Code Overflow</li> */}
         </Link></li>
