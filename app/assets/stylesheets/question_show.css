@@ -3,7 +3,12 @@
     flex-direction: row;
     width: 85vw;
     margin: auto;
-    height: 50vw;
+    height: 100%;
+}
+
+.with-footer {
+    display: flex;
+    flex-direction: column;
 }
 
 .question-title {
@@ -33,7 +38,8 @@
 .question-body h4 {
     word-wrap: break-word;
     width: 43vw;
-    font: arial black;
+    font-family: 'Raleway', sans-serif;
+    /* font: arial black; */
 }
 
 .divider {
@@ -55,7 +61,9 @@
 
 #answer-content {
     margin: 30px 30px;
+    padding-bottom: 10px;
     font-size: 18px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .btns {
