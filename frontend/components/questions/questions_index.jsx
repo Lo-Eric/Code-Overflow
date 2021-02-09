@@ -27,8 +27,8 @@ class QuestionsIndex extends React.Component {
                 <LeftNavBar />
               </section>
 
-              <section className="questions-header">
-                <div className="top-section">
+              <section className="questions-index">
+                <div className="questions-header">
                   <h2>Top Questions</h2>
                   <Link to="/question/new" id="ask-question-button">
                     Ask Question
@@ -37,7 +37,7 @@ class QuestionsIndex extends React.Component {
 
                 <div className="divider">.</div>
 
-                <div className="questions-index">
+                <div className="questions-body">
                   <ul>
                     {this.props.questions.map((question, idx) => (
                       <QuestionIndexItemContainer key={idx} question={question} />
@@ -59,7 +59,7 @@ class QuestionsIndex extends React.Component {
               <Footer />
             </div>
           </div>
-        );qu
+        );
     }
 }
 
