@@ -15,7 +15,7 @@ class Api::VotesController < ApplicationController
       # @question = Question.find(params[:votable_id])
       # render '/api/questions/show'
     elsif old_vote.score != @new_vote.score
-      old_vote.destory
+      old_vote.destroy
       @new_vote.save! 
       render :show
       # @question = Question.find(params[:votable_id])

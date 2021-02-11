@@ -55,14 +55,14 @@ class QuestionShowForm extends React.Component {
 
             <div className="question-body">
               <div className="vote-btns">
-                <button id='upvote-btn' onClick={this.handleVote(-1)}>
+                <button id='upvote-btn' onClick={this.handleVote(1)}>
                   <svg aria-hidden="true" className="svg-icon m0 iconArrowUpLg" width="36" height="36" viewBox="0 0 36 36">
                     <path d="M2 26h32L18 10z"></path>
                   </svg>
                 </button>
 
                 {/* <div className="question-score">{this.props.question.score}</div> */}
-                <button id='downvote-btn'>
+                <button id='downvote-btn' onClick={this.handleVote(-1)}>
                   <svg className="svg-icon m0 iconArrowDownLg" aria-hidden="true" width="36" height="36" viewBox="0 0 36 36"><path d="M2 10h32L18 26z"></path></svg>
                 </button>
               </div>

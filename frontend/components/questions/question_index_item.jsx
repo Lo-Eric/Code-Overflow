@@ -14,6 +14,12 @@ class QuestionIndexItem extends React.Component{
         if (!this.props.question.votes) {
           return null
         }; 
+        
+        let allVotes = this.props.question.votes; 
+        let totalVote = 0;
+        allVotes.forEach(vote => {
+            totalVote += vote.score
+        }) 
 
         return (
             <section className="question-index-item">
@@ -28,7 +34,7 @@ class QuestionIndexItem extends React.Component{
                 </div> */}
                 <div className="question-item-stats">
                     <div id='votes'>
-                        <h3>{this.props.question.votes.length}</h3>
+                        <h3>{totalVote}</h3>
                         <h4>votes</h4>
                     </div>
 
