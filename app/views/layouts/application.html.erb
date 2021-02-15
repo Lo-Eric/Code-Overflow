@@ -5,15 +5,6 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-     <meta property="og:title" content="Code Overflow" />
-     <meta property='og:image' content="<%= asset_path('CodeOverflow.png') %>"/>
-     <meta property="og:description"
-       content="Code Overflow is a clone of stackoverflow.com that allows users to post questions and receive answers from the community."
-     />
-     <meta property="og:url"
-       content="https://code-overflow.herokuapp.com/#/"
-     />
-
     <%= stylesheet_link_tag    'application', media: 'all'%>
     <%= javascript_include_tag 'application'%>
 
@@ -24,6 +15,15 @@
       window.dropdown = "<%= asset_path('dropdown.png')%>";
       window.globe = "<%= asset_path('globe.png')%>";
     </script>
+
+    <meta property="og:title" content="Code Overflow" />
+     <meta property='og:image' content="<%= image_url('CodeOverflow.png') %>"/>
+     <meta property="og:description"
+       content="Code Overflow is a clone of stackoverflow.com that allows users to post questions and receive answers from the community."
+     />
+     <meta property="og:url"
+       content="https://code-overflow.herokuapp.com/#/"
+     />
   </head>
 
   <body>
