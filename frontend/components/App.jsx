@@ -30,6 +30,7 @@ import { ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <div className="app">
+        
         <header>
             <NavBar />
         </header>
@@ -38,11 +39,11 @@ const App = () => (
             <Switch>
                 <Route exact path="/questions/:questionId" component={QuestionShowContainer} />
                 <Route exact path="/questions/:questionId/edit" component={QuestionEditContainer} />
-                <AuthRoute exact path="/" component={Splash} />
+                <Route exact path="/" component={Splash} />
                 <AuthRoute exact path="/DemoLogin" component={DemoFormContainer} />]
                 <AuthRoute exact path="/login" component={LoginFormContainer} />
                 <AuthRoute exact path="/signup" component={SignupFormContainer} />
-                <ProtectedRoute exact path="/home" component={QuestionsIndexContainer} />
+                <Route exact path="/home" component={QuestionsIndexContainer} />
                 <ProtectedRoute exact path="/question/new" component={CreateQuestionContainer} />
                 {/* <ProtectedRoute exact path="/questions/:questionId" component={QuestionsIndexContainer}/> */}
             </Switch>

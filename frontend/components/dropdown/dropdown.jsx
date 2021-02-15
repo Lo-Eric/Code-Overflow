@@ -21,9 +21,9 @@ class Dropdown extends React.Component {
         </button>
         <div className={this.state.dropdownShow ? "dropdown-content-show" : "dropdown-content"} id="myDropdown">
             <Link to='/home'>Home</Link>
-            <h4>Public</h4>
+            {/* <h4>Public</h4>
             <h4>Find a job</h4>
-            <h4>Teams</h4>
+            <h4>Teams</h4> */}
         </div>
     </div>
     )

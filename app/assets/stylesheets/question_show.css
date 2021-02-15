@@ -64,9 +64,11 @@
 #answer-content {
     margin: 30px 30px;
     padding-bottom: 10px;
-    font-size: 17px;
+    font-size: 16px;
     border-bottom: 1px solid #e0e0e0;
     font-family: 'Raleway', sans-serif;
+    word-wrap: break-word;
+    width: 43vw;
 }
 
 .btns {

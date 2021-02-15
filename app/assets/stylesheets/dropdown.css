@@ -13,14 +13,14 @@
     display: block;
     position: absolute;
     z-index: 1;
-    height: 300px;
-    width: 200px;
+    height: 18px;
+    width: 100px;
     background-color: white;
-    display: flex;
-    flex-direction: column;
+    text-align: center;
+    /* display: flex; */
+    /* flex-direction: column; */
     justify-content: space-between;
     box-shadow: 0 0 3px 1px rgba(85, 84, 84, 0.404);
-    text-align: left;
 }
 .dropdown-btn {
     padding: 10px 10px;
