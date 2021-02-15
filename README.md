@@ -1,6 +1,6 @@
 # README
 # Code Overflow
-[Code Overflow](https://code-overflow.herokuapp.com/#/) is an online community where anyone can share coding ideas and receive feedback or inspiration from others around the globe. 
+[Code Overflow](https://code-overflow.herokuapp.com/#/) is an online community where anyone can share ideas and receive feedback or inspiration from others around the globe. 
 
 
 
