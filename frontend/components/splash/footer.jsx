@@ -7,7 +7,7 @@ class Footer extends React.Component {
           <img className="footer-logo" src={window.logo} height="70" width="40" />
           <ul>
             <li id="column-header">CODE OVERFLOW</li>
-            <li>Questions </li>
+            <li id="header1-1">Questions </li>
             <li>Jobs</li>
             <li>Developer Jobs Directory</li>
             <li>Salary Calculator</li>
@@ -17,14 +17,14 @@ class Footer extends React.Component {
           </ul>
           <ul>
             <li id="column-header">PRODUCTS</li>
-            <li>Teams</li>
+            <li id="header2-1">Teams</li>
             <li>Talent</li>
             <li>Advertising</li>
             <li>Enterprise</li>
           </ul>
           <ul>
             <li id="column-header">COMPANY</li>
-            <li>About </li>
+            <li id="header3-1">About </li>
             <li>Press</li>
             <li>Work Here</li>
             <li>Legal</li>
@@ -32,8 +32,8 @@ class Footer extends React.Component {
             <li>Contact Us</li>
           </ul>
           <ul>
-          <li id="column-header">CODE EXCHANGE NETWORK</li>
-            <li>Technology </li>
+          <li id="column-header-4">CODE EXCHANGE NETWORK</li>
+            <li id="header4-1">Technology </li>
             <li>Life/Arts</li>
             <li>Culture/Recreation</li>
             <li>Science</li>
