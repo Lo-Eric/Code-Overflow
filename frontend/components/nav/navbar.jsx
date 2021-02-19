@@ -12,6 +12,7 @@ import Dropdown from '../dropdown/dropdown';
 
 class NavBar extends React.Component {
   render() {
+      
     return (
     <nav className="nav"> 
         <div className="nav-left">
