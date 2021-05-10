@@ -82,7 +82,6 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'Login') {
             var LoginForm = 
             <form onSubmit={this.handleSubmit} className="login-form-container">
-            
             <div className="login-form">
                 <br />
                 <div className="form_group">

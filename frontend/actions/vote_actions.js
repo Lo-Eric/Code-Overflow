@@ -27,7 +27,7 @@ const receiveVote = (vote) => {
 //       // (total_votes)  => dispatch(receiveVotes({total_votes, votableType})),
 //     //   (errors) => dispatch(receiveVoteErrors(errors.responseJSON))
 //     );
-// };
+// };=
 
 export const fetchVotes = (questionId) => (dispatch) => {
   return VoteAPIUtil.fetchVotes(questionId)

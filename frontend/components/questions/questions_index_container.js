@@ -8,6 +8,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     fetchQuestions: () => dispatch(fetchQuestions())
+    
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(QuestionsIndex);

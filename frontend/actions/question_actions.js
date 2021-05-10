@@ -45,4 +45,4 @@ export const updateQuestion = (question) => (dispatch) => {
 
 export const deleteQuestion = (questionId) => (dispatch) => {
     return QuestionAPIUtil.deleteQuestion(questionId).then(() => dispatch(removeQuestion(questionId)));
-};
+}; 

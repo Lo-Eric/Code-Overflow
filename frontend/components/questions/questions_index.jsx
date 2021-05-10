@@ -1,50 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import QuestionIndexItem from './question_index_item';
 import QuestionIndexItemContainer from './question_index_item_container'
 import LeftNavBar from '../left_nav_bar/left_nav'
 import Footer from '../splash/footer'
 
+function QuestionsIndex(props) {
+  useEffect (() => {props.fetchQuestions()})
 
-class QuestionsIndex extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    componentDidMount(){
-      this.props.fetchQuestions();
-    }
- 
-    render(){
-        if (!this.props.questions) {
-          return null
-        }; 
+  if (!props.questions) return null;
         
-        return (
-          <div className="index-contents">
-            <div className="home-contents">
-              <section className="left-nav-bar">
-                <LeftNavBar />
-              </section>
+  return (
+    <div className="index-contents">
+      <div className="home-contents">
+        <section className="left-nav-bar">
+          <LeftNavBar />
+        </section>
 
-              <section className="questions-index">
-                <div className="questions-header">
-                  <h2>Top Questions</h2>
-                  <Link to="/question/new" id="ask-question-button">
-                    Ask Question
-                  </Link>
-                </div>
+        <section className="questions-index">
+          <div className="questions-header">
+            <h2>Top Questions</h2>
+            <Link to="/question/new" id="ask-question-button">
+              Ask Question
+            </Link>
 
-                <div className="divider">.</div>
+          </div>
 
-                <div className="questions-body">
-                  <ul>
-                    {this.props.questions.map((question, idx) => (
-                      <QuestionIndexItemContainer key={idx} question={question} />
-                    ))}
-                  </ul>
-                </div>
-              </section>
+          <div className="divider">.</div>
+
+          <div className="questions-body">
+            <ul>
+              {props.questions.map((question, idx) => (
+                <QuestionIndexItemContainer key={idx} question={question} />
+              ))}
+            </ul>
+          </div>
+        </section>
 
               <section className="right-nav-bar">
                 <div className="right-nav-header">Watched Tags</div>
@@ -59,8 +50,7 @@ class QuestionsIndex extends React.Component {
               <Footer />
             </div>
           </div>
-        );
-    }
+  );
 }
 
 export default QuestionsIndex;
