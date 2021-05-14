@@ -42,12 +42,12 @@ class Footer extends React.Component {
 
           <section className="links">
             <div id="social">
-              <li>
+              {/* <li>
                 <a target="_blank" href="https://www.facebook.com">
                   Portfolio Site
                 </a>
               </li>
-              <br />
+              <br /> */}
               <li>
                 <a target="_blank" href="https://github.com/Lo-Eric">
                   GitHub
