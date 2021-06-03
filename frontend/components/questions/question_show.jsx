@@ -27,7 +27,6 @@ class QuestionShowForm extends React.Component {
       e.preventDefault();
       this.props
         .createVote(score, 'Question', this.props.question.id)
-        // .then((question) => this.props.history.push(`/questions/${question.question.id}`))
     }
   }
   
